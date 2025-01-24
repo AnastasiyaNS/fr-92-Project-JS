@@ -38,7 +38,10 @@ body {
 
 //*** section 5  адаптацию делаем сразу в своей секции
 .block-5{
-    background-color: #363A4D;
+    background-color: $mainBackgrColor;
+    margin-left: 390px;
+    width: 1140px;
+    height: 668px;
 }
 
 /* Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */
@@ -46,9 +49,9 @@ body {
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 19px;
 width: 1140px;
 height: 66px;
+margin-bottom: 19px;
 font-size: 36px;
 font-weight: 700;
 line-height:124.5%;
@@ -58,13 +61,20 @@ color:#fff;
 
 #line-blc5{
     width: 85px;
-    height: 2px;
+    height: 10px;
+}
+
+.accordion{
+height: 553px;
 }
 
 /* Обертка блок 5 (QA and Form) */
 .wrap-block5{
     display: flex;
-    gap:34px;
+    width: 1140px;
+    height:668px;
+    margin-top: 49px;
+    
 }
 
 /* Обертка вопрос-ответ */
@@ -78,7 +88,7 @@ color:#fff;
     height: 64px;
     padding-left: 34px;
     padding-top: 21px;
-/* margin-bottom: 16px; */
+    margin-bottom: 16px; 
     font-size: 18px;
     font-weight: 700;
     line-height:124.5%;
@@ -96,7 +106,9 @@ color:#fff;
 
 /* При наведении меняется цвет */
 .active, .question-blc5:hover {
-    background-color: #3a444e92;
+    background-color: #FFF;
+    color:black;
+    margin-bottom: 0px;
 }
 /* Изменение значка стрелочки при нажатии */
 .question-blc5:after {
@@ -132,28 +144,32 @@ color:#fff;
     background-color: #3a444e9d;
     border: 1px;
     border-radius: 20px;
+    box-sizing: border-box;
     }
     
     /* Заголовок формы (бл.5) */
     .formtitle-blc5{
-        margin-top: 38px;
+        // padding-top: 38px;
+        // padding-bottom: 8px;
         font-size: 24px;
         font-weight: 700;
         line-height: 126%;
         text-align: left;
         color: #FFF;
-        padding-left: 40px;
+        margin-left: 40px;
     }
     
     /* Подзаголовок формы (бл.5) */
     .formtext-blc5{
-        padding-right: 45px;
+        margin-right: 45px;
+        margin-left: 40px;
+        margin-bottom: 23px;
         font-size: 17px;
         font-weight: 400;
         line-height: 126%;
         text-align: left;
         color: #FFF;
-        padding-left: 40px;
+        
     }
     
     /* Окошки формы/инпуты (бл.5)-общие свойства */
@@ -167,6 +183,7 @@ color:#fff;
         color:#CBCBCB;
         background-color: #FFFFFF;
         border-radius: 10px;
+        box-sizing:border-box;
     }
     
     /* Имя телефон емайл формы */
