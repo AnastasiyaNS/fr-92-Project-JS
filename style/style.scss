@@ -5,6 +5,10 @@ $font: "Figtree", serif;
 
 body {
     background-color: $mainBackgrColor;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    
 }
 
 
@@ -16,7 +20,279 @@ body {
 
 
 //*** section 2  адаптацию делаем сразу в своей секции
+#section2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+.section2_calc_part {
+    display: flex;
+}
+#manHelmet {
+    width: 600px;
+    height: 900px;
+    @media screen and (max-width: 768px) {
+        width: 400px;
+        max-width: 600px;
+    }
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+.section2_formcalc {
+    background-color: $lightColor;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    @media screen and (max-width: 375px) {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+.part2_formcalc {
+    display: flex;
+    flex-direction: column;
+    //padding: 20px;
+}
+.part2_formcalc1 {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 4%;
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.part2_formcalc2 {
+    margin-top: 20px;
 
+}
+.part2_form_item {
+    display: flex;
+    flex-direction: column;
+}
+#section2 form h1 {
+    color: white;
+    font-family: "Open Sans", serif;
+    text-transform: uppercase;
+    @media screen and (max-width: 375px) {
+       font-size: 1rem;
+       width: 90%;
+       margin-left: 5%;
+    }
+}
+.part2_calc {
+    color: white;
+    font-family: "Open Sans", serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+}
+.part2_calc_input {
+    font-family: "Open Sans", serif;
+    color: #CBCBCB;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+.part2_inputlabel {
+    margin-top: 20px;
+    color: #CBCBCB;
+    padding: 10px;
+    font-family: "Open Sans", serif;
+    font-size: 0.8rem;
+    border: 3px $lightColor dashed;
+    border-radius: 10px;
+    text-align: center;
+}
+#part2_inputfile {
+    //display: none;
+
+}
+.part2_calc_button {
+    margin-top: 10px;
+    background-color: $buttonColor;
+    padding: 15px;
+    width: 60%;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.part2_calc_button:hover{
+    cursor: pointer;
+}
+
+/// modal pop-up
+#part2_calc_volumecalc {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: 0.6rem;
+    color: rgb(218, 3, 3);
+    
+}
+#part2_calc_volumecalc:hover{
+    cursor: pointer;
+}
+
+.section2_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 30rem;
+    top: 0;
+    width: 30%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    @media screen and (max-width: 768px) {
+        width: 60%;
+        left: 10rem;
+     }
+    @media screen and (max-width: 375px) {
+        width: 90%;
+        left: 0;
+     }
+  }
+  /* Modal Content */
+.section2_modal-content {
+    background-color: $mainBackgrColor;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 20px;
+    color: white;
+    font-family: "Open Sans", serif;
+    font-size: 0.8rem;
+    input {
+        padding: 10px;
+        max-width: 60%;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+    select {
+        padding: 10px;
+        max-width: 60%;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+  }
+  .section2_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .section2_close:hover,
+    .section2_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+.section2_modal_calcVolume_item {
+    display: flex;
+    flex-direction: column;
+}
+.section2_modal_calcVolume_final {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    button {
+        width: 60%;
+        max-width: 60%;
+        margin-top: 20px;
+        background-color: #E58D35;
+        font-family: "Open Sans", serif;
+        color: white;
+        border-radius: 30px;
+        padding: 15px;
+        border: none;
+    }
+    p {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        align-self: flex-end;
+        width: 30%;
+        max-width: 60%;
+    }
+}
+
+/// calculator
+// .section2_curr_exch {
+//     display: flex;
+// }
+.currency_exch_calc {
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //margin: 0 auto;
+    max-width: 50%;
+    background-color: #767c9645;
+    border-radius: 20px;
+    padding: 30px;
+    font-family: "Open Sans", serif;
+    label {
+        padding: 5px;
+    }
+    input {
+        padding: 10px;
+        max-width: 60%;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+    button {
+        width: 60%;
+        max-width: 80%;
+        margin-top: 20px;
+        background-color: #E58D35;
+        font-family: "Open Sans", serif;
+        color: white;
+        border-radius: 30px;
+        padding: 15px;
+        border: none;
+    }
+    p {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        align-self: flex-end;
+        width: 50%;
+        max-width: 80%;
+    }
+}
+.currency_exch_calc_item {
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    font-family: "Open Sans", serif;
+    font-size: 0.8rem;
+    color: white;
+}
+.currency_exch_calc_final {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
 
 
 
