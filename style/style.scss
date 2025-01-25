@@ -43,6 +43,20 @@ body {
     width: 1140px;
     height: 668px;
 }
+.arrow-circle-closed{
+    content: url('/public/block5/arrow-circle-closed.svg');
+    width: 27px;
+    height: 27px;
+    padding-right: 19px;
+    padding-bottom: 18px;
+}
+.arrow-circle-open{
+    content: url('/public/block5/arrow-circle-gold.svg');
+    width: 27px;
+    height: 27px;
+    padding-right: 19px;
+    padding-bottom: 18px;
+}
 
 /* Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */
 .title-blc5{
@@ -51,21 +65,17 @@ flex-direction: column;
 align-items: center;
 width: 1140px;
 height: 66px;
-margin-bottom: 19px;
+// margin-bottom: 19px;
 font-size: 36px;
 font-weight: 700;
-line-height:124.5%;
+// line-height:124.5%;
 text-align: center;
 color:#fff;
 }
 
 #line-blc5{
     width: 85px;
-    height: 10px;
-}
-
-.accordion{
-height: 553px;
+    height: 2px;
 }
 
 /* Обертка блок 5 (QA and Form) */
@@ -74,21 +84,32 @@ height: 553px;
     width: 1140px;
     height:668px;
     margin-top: 49px;
-    
+    justify-content: space-between;
+    gap:34px;
 }
 
-/* Обертка вопрос-ответ */
+// Блок Вопрос-Ответ
+.accordion{
+height: 553px;
+padding-bottom: 20px;  
+// display: flex;
+}
+
 .acc-bl5{
-    margin-bottom: 16px;
+    width: 716px; 
+margin-bottom: 16px; 
+    box-sizing: border-box;
+    // width: 716px;
+    // height: 64px;
 }
 
 /* ВОПРОС */
-.question-blc5 {
-    width: 716px;
-    height: 64px;
+.head-acc {
+    // height: 64px;
+   
     padding-left: 34px;
     padding-top: 21px;
-    margin-bottom: 16px; 
+
     font-size: 18px;
     font-weight: 700;
     line-height:124.5%;
@@ -96,36 +117,16 @@ height: 553px;
     color:#fff;
     background-color: #363A4D;
     cursor: pointer;
-    border: 3px solid #3A444E;
+    border: 1px solid #3A444E;
     border-radius: 10px;
     transition: 0.5s;
-    /* outline: none; */
-    /* padding: 16px; */
-    /* width: 50%; */
-}
+    display: flex;
+    justify-content: space-between;
+} 
 
-/* При наведении меняется цвет */
-.active, .question-blc5:hover {
-    background-color: #FFF;
-    color:black;
-    margin-bottom: 0px;
-}
-/* Изменение значка стрелочки при нажатии */
-.question-blc5:after {
-    content: url('/public/block5/arrow-circle-left.svg');
-    padding-right: 19px;
-    color: #363A4D;
-	font-size: 18px;
-    font-weight: 700;
-    float: right;
-    /* margin-left: 5px; */
-}
-.active:after {
-    content: url('/public/block5/arrow-circle-gold.svg');
-}
-
-/* ОТВЕТ (panel)*/
+// ОТВЕТ
 .answer-bl5 {
+    box-sizing: border-box;
     width: 716px;
     padding-left: 34px;
     font-size: 17px;
@@ -133,10 +134,73 @@ height: 553px;
     line-height: 144.5%;
     color: #282B38;
     background-color: #fff;
-	overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-}
+    overflow: hidden; 
+height: 0px;
+// border: 1px solid #3A444E;
+border-radius: 10px;
+// display: none; 
+    /* transition: max-height 0.3s ease-out; */
+} 
+
+
+
+// /* ВОПРОС */
+// .question-blc5 {
+    // width: 716px;
+    // height: 64px;
+    // padding-left: 34px;
+    // padding-top: 21px;
+    // margin-bottom: 16px; 
+    // font-size: 18px;
+    // font-weight: 700;
+    // line-height:124.5%;
+    // text-align: left;
+    // color:#fff;
+    // background-color: #363A4D;
+    // cursor: pointer;
+    // border: 3px solid #3A444E;
+    // border-radius: 10px;
+    // transition: 0.5s;
+    /* outline: none; */
+    /* padding: 16px; */
+    /* width: 50%; */
+// }
+
+// /* При наведении меняется цвет */
+// .active, .question-blc5:hover {
+//     background-color: #FFF;
+//     color:black;
+//     margin-bottom: 0px;
+// }
+// /* Изменение значка стрелочки при нажатии */
+// .question-blc5:after {
+//     content: url('/public/block5/arrow-circle-left.svg');
+//     padding-right: 19px;
+//     color: #363A4D;
+// 	font-size: 18px;
+//     font-weight: 700;
+//     float: right;
+//     /* margin-left: 5px; */
+// }
+// .active:after {
+//     content: url('/public/block5/arrow-circle-gold.svg');
+// }
+
+// /* ОТВЕТ (panel)*/
+// .answer-bl5 {
+//     width: 716px;
+//     padding-left: 34px;
+//     font-size: 17px;
+//     font-weight: 400;
+//     line-height: 144.5%;
+//     color: #282B38;
+//     background-color: #fff;
+// 	overflow: hidden;
+//     max-height: 0;
+//     transition: max-height 0.3s ease-out;
+// }
+
+
 /* ФОРМА БЛОК5*/
 .form-blc5{
     width: 390px;
