@@ -37,25 +37,42 @@ body {
 
 
 //*** section 5  адаптацию делаем сразу в своей секции
-.block-5{
-    background-color: $mainBackgrColor;
-    margin-left: 390px;
-    width: 1140px;
-    height: 668px;
-}
-.arrow-circle-closed{
-    content: url('/public/block5/arrow-circle-closed.svg');
+
+// Параметры значков-бл5
+%imgParametrsbl5{
     width: 27px;
     height: 27px;
-    padding-right: 19px;
-    padding-bottom: 18px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+}
+// Width block5
+$width1440Bl5: 1140px;
+
+
+.block-5{
+    background-color: $mainBackgrColor;
+    margin-left: 150px;
+    margin-right: 150px;
+    width: $width1440Bl5;
+    height: 668px;
+}
+
+.arrow-circle-closed{
+    content: url('/public/block5/arrow-circle-closed.svg');
+    // width: 27px;
+    // height: 27px;
+    // padding-right: 19px;
+    // padding-bottom: 18px;
 }
 .arrow-circle-open{
     content: url('/public/block5/arrow-circle-gold.svg');
-    width: 27px;
-    height: 27px;
-    padding-right: 19px;
-    padding-bottom: 18px;
+    // width: 27px;
+    // height: 27px;
+    // padding-right: 19px;
+    // padding-bottom: 18px;
+}
+.arrow-circle-closed,.arrow-circle-open{
+    @extend %imgParametrsbl5
 }
 
 /* Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */
@@ -63,7 +80,7 @@ body {
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 1140px;
+width: $width1440Bl5;
 height: 66px;
 // margin-bottom: 19px;
 font-size: 36px;
@@ -81,7 +98,7 @@ color:#fff;
 /* Обертка блок 5 (QA and Form) */
 .wrap-block5{
     display: flex;
-    width: 1140px;
+    width: $width1440Bl5;
     height:668px;
     margin-top: 49px;
     justify-content: space-between;
@@ -106,10 +123,8 @@ margin-bottom: 16px;
 /* ВОПРОС */
 .head-acc {
     // height: 64px;
-   
     padding-left: 34px;
     padding-top: 21px;
-
     font-size: 18px;
     font-weight: 700;
     line-height:124.5%;
@@ -141,64 +156,134 @@ border-radius: 10px;
 // display: none; 
     /* transition: max-height 0.3s ease-out; */
 } 
+$width768Bl5: 668px;
+@media screen and (max-width:1024px) and (min-width:768px){
+    .block-5{
+        margin-left: 50px;
+        margin-right: 50px;
+        width: $width768Bl5;
+        // height: 668px;
+    }
+    .title-blc5{
+        width: $width768Bl5;
+        height: 60px;
+        font-size: 24px;
+        }
+        
+    .wrap-block5{
+        flex-direction: column;
+        width: $width768Bl5;
+        height:1100px;
+        margin-top: 27px;
+        align-items: center;
+        gap:28px;
+    }
+        
+        // Блок Вопрос-Ответ
+        // .accordion{
+        // height: 553px;
+        // padding-bottom: 20px;  
+        // display: flex;
+        // }
+        
+        .acc-bl5{
+            width: 600px; 
+            margin-bottom: 16px; 
+            box-sizing: border-box;
+        }
+        .head-acc{
+            padding-left: 22px;
+        }
+        // ОТВЕТ
+        .answer-bl5 {
+            width: 600px;
+        }     
+}
 
+// @media screen and (min-width:375px){
+//     .block-5{
+//         margin-left: 0px;
+//         margin-right: 0px;
+//         width: 375px;
+//         // height: 668px;
+//     }
+//     .title-blc5{
+//         width: 335px;
+//         height: 60px;
+//         margin-left: 20px;
+//         margin-right: 20px;
+//         }
+        
+//     .wrap-block5{
+//         width: 335px;
+//         margin-left: 20px;
+//         margin-right: 20px;
+//         // height:1100px;
+//         margin-top: 27px;
+//         align-items: center;
+//         // gap:28px;
+//         // display: flex;
+//         // flex-direction: column;
+//     }
+        
+//         // Блок Вопрос-Ответ
+//         // .accordion{
+//         // height: 553px;
+//         // padding-bottom: 20px;  
+//         // display: flex;
+//         // }
+        
+//         .acc-bl5{
+//             width: 335px; 
+//             // margin-bottom: 16px; 
+            
+//         }
+//         .head-acc{
+//             font-size: 16px;
+//             padding-left: 22px;
+//         }
+//         // ОТВЕТ
+//         .answer-bl5 {
+//             width: 335px;
+//             font-size: 14px;
+//             padding-left: 22px;
+//         }  
+//         // ФОРМА Блок5
+//         .form-blc5{
+//             width: 335px;
+//             padding-top: 38px;
+//             padding-bottom: 38px;
+            
+//         }
+//         /* Заголовок формы (бл.5) */
+//         .formtitle-blc5{
+//             text-align: center;
+//         }
+//         .formtitle-blc5, .formtext-blc5, .input-blc5, .inputmessage-blc5, .button-blc5{
+//             margin-left: 20px;
+//         }
+//         // .formtext-blc5{
+//         //     margin-right: 45px;
+//         //     // margin-left: 40px;
+//         //     margin-bottom: 23px;
+//         //     font-size: 17px;
+//         //     font-weight: 400;
+//         //     line-height: 126%;
+//         //     text-align: left;
+//         //     color: #FFF;
+//         // }   
 
-
-// /* ВОПРОС */
-// .question-blc5 {
-    // width: 716px;
-    // height: 64px;
-    // padding-left: 34px;
-    // padding-top: 21px;
-    // margin-bottom: 16px; 
-    // font-size: 18px;
-    // font-weight: 700;
-    // line-height:124.5%;
-    // text-align: left;
-    // color:#fff;
-    // background-color: #363A4D;
-    // cursor: pointer;
-    // border: 3px solid #3A444E;
-    // border-radius: 10px;
-    // transition: 0.5s;
-    /* outline: none; */
-    /* padding: 16px; */
-    /* width: 50%; */
+// /* Окошки формы/инпуты (бл.5)-общие свойства */
+// .input-blc5, .inputmessage-blc5{
+//     width: 295px; 
+// }
+//         /* Кнопка "ОТПРАВИТЬ" (бл.5) */
+//     .button-blc5{
+//         width: 295px;
+//         }
 // }
 
-// /* При наведении меняется цвет */
-// .active, .question-blc5:hover {
-//     background-color: #FFF;
-//     color:black;
-//     margin-bottom: 0px;
-// }
-// /* Изменение значка стрелочки при нажатии */
-// .question-blc5:after {
-//     content: url('/public/block5/arrow-circle-left.svg');
-//     padding-right: 19px;
-//     color: #363A4D;
-// 	font-size: 18px;
-//     font-weight: 700;
-//     float: right;
-//     /* margin-left: 5px; */
-// }
-// .active:after {
-//     content: url('/public/block5/arrow-circle-gold.svg');
-// }
 
-// /* ОТВЕТ (panel)*/
-// .answer-bl5 {
-//     width: 716px;
-//     padding-left: 34px;
-//     font-size: 17px;
-//     font-weight: 400;
-//     line-height: 144.5%;
-//     color: #282B38;
-//     background-color: #fff;
-// 	overflow: hidden;
-//     max-height: 0;
-//     transition: max-height 0.3s ease-out;
-// }
 
 
 /* ФОРМА БЛОК5*/
@@ -220,26 +305,29 @@ border-radius: 10px;
         line-height: 126%;
         text-align: left;
         color: #FFF;
+        // margin-left: 40px;
+    }
+
+    .formtitle-blc5, .formtext-blc5, .input-blc5, .inputmessage-blc5, .button-blc5{
         margin-left: 40px;
     }
-    
+
     /* Подзаголовок формы (бл.5) */
     .formtext-blc5{
         margin-right: 45px;
-        margin-left: 40px;
+        // margin-left: 40px;
         margin-bottom: 23px;
         font-size: 17px;
         font-weight: 400;
         line-height: 126%;
         text-align: left;
         color: #FFF;
-        
     }
     
     /* Окошки формы/инпуты (бл.5)-общие свойства */
     .input-blc5, .inputmessage-blc5{
         width: 310px; 
-        margin-left: 40px;
+        // margin-left: 40px;
         padding-left: 20px;
         font-size: 15px;
         font-weight: 400;
@@ -271,7 +359,7 @@ border-radius: 10px;
     justify-content: space-between;
     width: 310px;
     height: 68px;
-    margin-left: 40px;
+    // margin-left: 40px;
     margin-bottom: 38px;
     padding-left: 33px;
     padding-right: 19px;
