@@ -73,13 +73,12 @@ body {
     .conteiner-block3{
         grid-template-columns:2fr;
         
-
   }
     
   }
 
   .conteiner-block3-one{
-  
+    
     background-color: rgb(54, 58, 77) ;
     width: 100%;
     align-items: center;
@@ -126,8 +125,6 @@ body {
   color: rgba(255, 255, 255, 1);
   }
   
-  /*блок 3 карусель*/
-  
   .carousel-card-block3{
     display: flex;
     flex-direction: column;
@@ -159,7 +156,6 @@ body {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
   }
   
   .carousel-block3-images{
@@ -178,7 +174,6 @@ body {
   .carousel-block3-ikon{
     width: 22px;
   height: 22px;
-  
   }
   
   #span-carousel-block3{
@@ -232,13 +227,17 @@ body {
     width: 1140px;
     margin: 0 auto;
     overflow: hidden;
+    @media screen and (max-width:1440px){
+      width: 740px;
+
+  }
     @media screen and (max-width:375px){
         width: 100%;
 
-    }
+    };
+   
   }
   
-
   .container-carousel {
     position: relative;
     width: fit-content;
@@ -262,7 +261,7 @@ body {
     border: none;
     font-size: 24px;
     color: white;
-    @media screen and (max-width:375px){
+    @media screen and (max-width:1440px){
         display: none;
 
     }

@@ -16,17 +16,11 @@ nextButton.addEventListener("click", () => {
 });
 
 const slide = () => {
-  const imageWidth = slider.clientWidth;
   const slideOffset = -slideIndex * 380;
   slider.style.transform = `translateX(${slideOffset}px)`;
 };
 
-window.addEventListener("load", () => {
+slider.addEventListener("touchstart", () => {
+  slideIndex = (slideIndex + 1) % slideCount;
   slide();
 });
-
-if (window.matchMedia("(min-width: 400px)").matches) {
-  /* the viewport is at least 400 pixels wide */
-} else {
-  /* the viewport is less than 400 pixels wide */
-}
