@@ -13,47 +13,93 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 10px 20px;
     color: white;
     height: 100px;
-    .navigation {
-        .hamburger-menu {
+    position: relative;
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
             display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            background-color: $mainBackgrColor;
+            z-index: 1;
+            gap: 20px;
         }
-        .wide-navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 50px;
+        .nav-links {
             list-style: none;
-            .wide_menu {
+            display: flex;
+            margin: 20px;
+            padding: 10px;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                margin: 0 15px;
+                @media (max-width: 768px) {
+                    margin: 10px 0;
+                    text-align: center;
+                }
+            }
+            a {
+                color: white;
                 text-decoration: none;
             }
         }
+        .nav_btn {
+            background-color: $buttonColor;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 90px;
+            height: 50px;
+            width: 171px;
+        }
     }
-    button {
-        border: none;
-        border-radius: 90px;
-        background-color: $buttonColor;
-        color: #FFFFFF;
-        height: 50px;
-        width: 171px;
+    .navbar.active{
+        @media (max-width: 768px) {
+            display: flex;
+            }
+        }
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+        .line {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 3px 0;
+        }
     }
 }
 
 .slider{
     position: relative;
-    width: 1400px;
     max-width: 100vw;
     height: 700px;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    margin: 30px;
+    margin: 10px;
     .list {
         position: absolute;
-        width: max-content;
-        height: 100%;
+        height: 800px;
         left: 0;
         top: 0;
         display: flex;
@@ -134,16 +180,12 @@ body {
             border-radius: 20px;
             transition: 0.5s;
             cursor: pointer;
-            .active {
-                width: 30px;
-            }
+        }
+        li.active {
+            width: 30px;
         }
     }
 }
-
-
-
-
 
 //*** section 2  адаптацию делаем сразу в своей секции
 

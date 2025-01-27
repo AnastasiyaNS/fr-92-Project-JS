@@ -1,3 +1,9 @@
+const burger = document.getElementById('burger');
+burger.addEventListener('click', function(){
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+})
+
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -17,7 +23,7 @@ function prevToggle(){
     reloadSlider();
 }
 
-//let refreshInterval = setInterval(()=> {next.click()}, 5000);
+let refreshInterval = setInterval(()=> {next.click()}, 5000);
 
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
