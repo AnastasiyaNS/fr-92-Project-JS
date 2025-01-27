@@ -1,31 +1,32 @@
 const burger = document.getElementById('burger');
-burger.addEventListener('click', function(){
+export burger.addEventListener('click', function(){
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');
 })
 
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+export let next = document.getElementById('next');
+export let prev = document.getElementById('prev');
+export let dots = document.querySelectorAll('.slider .dots li');
 
-let lengthItems = items.length - 1;
-let active = 0;
 
-function nextToggle(){
+export function nextToggle(){
+    let items = document.querySelectorAll('.slider .list .item');
+    let lengthItems = items.length - 1;
+    let active = 0;
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
 }
 
-function prevToggle(){
+export function prevToggle(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
 
-let refreshInterval = setInterval(()=> {next.click()}, 5000);
+export let refreshInterval = setInterval(()=> {next.click()}, 5000);
 
-function reloadSlider(){
+export function reloadSlider(){
+    let items = document.querySelectorAll('.slider .list .item');
+    let slider = document.querySelector('.slider .list');
     slider.style.left = -items[active].offsetLeft + 'px';
     let last_active_dot = document.querySelector('.slider .dots li.active');
     last_active_dot.classList.remove('active');
@@ -35,7 +36,7 @@ function reloadSlider(){
     refreshInterval = setInterval(()=> {next.click()}, 5000);
 }
 
-dots.forEach((li, key) => {
+export dots.forEach((li, key) => {
     li.addEventListener('click', ()=>{
     active = key;
     reloadSlider();
