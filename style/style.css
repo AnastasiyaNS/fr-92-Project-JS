@@ -24,11 +24,6 @@ body {
 }
 * {
   box-sizing: border-box;
-  font-family: Proxima Nova;
-}
-
-body {
-  background-color: #363a4d;
 }
 
 ul {
@@ -96,6 +91,7 @@ a {
 .cooperation__info-btn {
   margin-left: 40px;
   margin-bottom: 20px;
+  font-family: Proxima Nova;
   font-weight: 600;
   font-size: 16px;
   line-height: 146%;
