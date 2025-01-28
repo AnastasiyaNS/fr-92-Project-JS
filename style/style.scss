@@ -16,6 +16,205 @@ body {
 
 //*** section 1  адаптацию делаем сразу в своей секции
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: white;
+    height: 100px;
+    position: relative;
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            background-color: $mainBackgrColor;
+            z-index: 1;
+            gap: 20px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 20px;
+            padding: 10px;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                margin: 0 15px;
+                @media (max-width: 768px) {
+                    margin: 10px 0;
+                    text-align: center;
+                }
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .nav-links li:hover{
+            transform: scale(1.2);
+        }
+        .nav_btn {
+            background-color: $buttonColor;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 90px;
+            height: 50px;
+            width: 171px;
+        }
+        .nav_btn:hover{
+            background-color: #d1761b;
+        }
+    }
+    .navbar.active{
+        @media (max-width: 768px) {
+            display: flex;
+            }
+        }
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+        .line {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 3px 0;
+        }
+    }
+}
+
+.slider_block1{
+    position: relative;
+    max-width: 100vw;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    .list {
+        position: absolute;
+        height: 800px;
+        left: 0;
+        top: 0;
+        display: flex;
+        transition: 1s;
+        .item{
+            position: relative;
+            img {
+                width: 1400px;
+                max-width: 100vw;
+                height: 100%;
+                object-fit: cover;
+            }
+            .content {
+                position: absolute;
+                bottom: 300px;
+                left: 200px;
+                color: white;
+                @media (max-width: 375px) {
+                    left: 50px;
+                    bottom: 350px;
+                }
+                h1 {
+                    width: 350px;
+                    font-size: 40px;
+                    @media (max-width: 375px) {
+                        width: 200px;
+                        font-size: 35px;
+                    }
+                }
+                p {
+                    width: 300px;
+                    font-size: 18px;
+                    @media (max-width: 375px) {
+                        width: 200px;
+                    }
+                }
+                button {
+                    margin-top: 20px;
+                    width: 240px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 90px;
+                    background-color: $buttonColor;
+                    color: white;
+                    cursor: pointer;
+                    @media (max-width: 375px) {
+                        width: 200px;
+                    }
+                }
+                button:hover{
+                    background-color: #d1761b;
+                }
+            }
+        }
+        
+    }
+    .buttons {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 20%;
+            background-color: #fff5;
+            color: #fff;
+            border: none;
+            font-family: monospace;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            border: 3px solid #fff;
+        }
+    }
+    .dots {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        li {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: 10px;
+            border-radius: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        li.active {
+            width: 30px;
+        }
+    }
+}
 
 
 //*** section 2  адаптацию делаем сразу в своей секции
@@ -181,6 +380,7 @@ body {
 #part2_calc_volumecalc:hover{
     cursor: pointer;
 }
+
 
 .section2_modal {
     display: none; /* Hidden by default */
