@@ -102,66 +102,53 @@ contactCustPhone.addEventListener('input', () => validateAll([contactCustName, c
 contactCustEmail.addEventListener('input', () => validateAll([contactCustName, contactCustPhone, contactCustEmail, contactCustMsg]));
 contactCustMsg.addEventListener('input', () => validateAll([contactCustName, contactCustPhone, contactCustEmail, contactCustMsg]));
 
-
 //volume calculator
-const formVol = document.forms.section2_modal_calcVolume;
-const buttonVol = document.getElementById("section2_modal_calcVolume_btn");
+export const formVol = document.forms.section2_modal_calcVolume;
+export const buttonVol = document.getElementById("section2_modal_calcVolume_btn");
+export const widthVol = document.getElementById("section2_modal_width");
+export const lengthVol = document.getElementById("section2_modal_length1");
+export const heightVol = document.getElementById("section2_modal_height");
+const optionVolUnit = formVol.elements.units;
 
-buttonVol.addEventListener('click', calcVolume)
 
-function calcVolume(e){
+
+export function calcVolume(e){
     e.preventDefault();
     
-    const widthVol = +formVol.elements.width.value;
-    const lengthVol = +formVol.elements.length1.value;
-    const heightVol = +formVol.elements.height.value;
-    const optionVolUnit = formVol.elements.units;
-    const volumeFinal = lengthVol * widthVol * heightVol;
-    console.log(volumeFinal)
-    document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal;
-    if (optionVolUnit.value === 'mm') {
-        document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal + ' мм3';
-    }
-    if (optionVolUnit.value === 'cm') {
-        document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal + ' см3';
-    }
-    if (optionVolUnit.value === 'meter') {
-        document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal + ' м3';
+    const correctValueWidth = +widthVol.value.trim();
+    const correctValueLength = +lengthVol.value.trim();
+    const correctValueHeight = +heightVol.value.trim();
+    console.log(correctValueLength)
+    const volumeFinal = Number(correctValueWidth * correctValueLength * correctValueHeight);
+
+    if (widthVol.value.trim() === '' || lengthVol.value.trim() === '' || heightVol.value.trim() === '' ) {
+        console.log("please enter a number!");
+        document.getElementById("section2_modal_calcVolume_item_errormsg").classList.add("section2_modal_calcVolume_item_errormsg");
+        document.getElementById("section2_modal_calcVolume_item_errormsg").textContent = "Пожалуйста, заполните все поля!";
+        return;
     }
 
-    //validation of volume calculator
+    else {
+        
+        document.getElementById("section2_modal_calcVolume_item_errormsg").textContent = "";
+        console.log("correct!");
+        console.log(correctValueWidth * correctValueLength * correctValueHeight);
+        //document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal;
+        if (optionVolUnit.value === 'mm') {
+            document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal.toFixed(2) + ' мм3';
+        }
+        if (optionVolUnit.value === 'cm') {
+            document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal.toFixed(2) + ' см3';
+        }
+        if (optionVolUnit.value === 'meter') {
+            document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal.toFixed(2) + ' м3';
+        }
+        return true;
+    }
+   
 
 
 }
-
-// function validateUnitAmount(unit){
-//     const correctValue = unit.value;
-//     const regex = /^[0-9]*\.?[0-9]*$/;
-//     if (correctValue === '') {
-//         console.log("please enter correct number!")
-//         return;
-//     }
-//     if (regex.test(correctValue) === false){
-//         //showErrorMsg(input, "Возраст должен состоять из цифр")
-//         console.log("incorrect!")
-//         return;
-//     }
-// }
-
-// function validateAllUnits(units){
-//     const unitsErr = units.filter((unit) => units.value.trim() === '');
-//     if(unitsErr.length === 0) {
-//         buttonVol.disabled = false;
-//     }
-// }
-
-// widthVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
-// lengthVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
-// heightVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
-
-
-
-
 
 //Modal window of volume calculator
 const modalWindow = document.getElementById("section2_myModal");

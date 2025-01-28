@@ -215,6 +215,17 @@ body {
     color: white;
     font-family: "Open Sans", serif;
     font-size: 0.8rem;
+    @media screen and (max-width: 768px) {
+        width: 30%;
+        left: 0;
+     }
+    @media screen and (max-width: 375px) {
+        width: 50%;
+        left: 0;
+     }
+    label {
+        padding: 5px;
+    }
     input {
         padding: 10px;
         max-width: 60%;
@@ -274,6 +285,9 @@ body {
     button:hover {
         cursor: pointer;
     }
+    button:disabled {
+        opacity: 0.5;
+    }
     p {
         color: black;
         background-color: white;
@@ -283,8 +297,18 @@ body {
         align-self: flex-end;
         width: 30%;
         max-width: 60%;
+        height: 20px;
+        text-align: end;
     }
 }
+.section2_modal_calcVolume_item_errormsg {
+    color: red;
+    font-family: "Open Sans", serif;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /// calculator
 // .section2_curr_exch {
