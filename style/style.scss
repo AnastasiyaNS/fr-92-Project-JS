@@ -17,264 +17,286 @@ body {
 
 //*** section 3  адаптацию делаем сразу в своей секции
 .h2-block3{
-    font-family: 'Figtree', serif;
-    font-size: 36px;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
+  font-family: 'Figtree', serif;
+  font-size: 36px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
 }
 
-  body{
-    background-color:  #282B38;
-  }
+body{
+  background-color:  #282B38;
+}
 
-  
-  .block3{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .title-block3{
-  
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  #underline-block3-one{
+
+.block3{
+  display: flex;
+  justify-content: center;
+}
+
+.title-block3{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#underline-block3-one{
   width: 85px;
   height: 2px;
   background: rgba(229, 141, 53, 1);
-  
-  }
-  
-  #underline-block3-two{
-    width: 85px;
+  margin-bottom: 20px;
+}
+
+#underline-block3-two{
+  width: 85px;
   height: 2px;
   background: rgba(137, 194, 73, 1);
-  }
-  
-  .conteiner-block3{
+  margin-bottom: 20px;
+}
+
+.conteiner-block3{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin-left: 20%;
   margin-right: 20%;
-  
-  }
+  transition: transform 0.5s;
+
   @media screen and (max-width: 768px){
-    .conteiner-block3{
-        grid-template-columns:repeat(3, 1fr);
-
-    }
+    grid-template-columns:repeat(3, 1fr);
   }
+
   @media screen and (max-width: 375px){
-    .conteiner-block3{
-        grid-template-columns:2fr;
-        
+    grid-template-columns: repeat(8, 100vw);
+    grid-template-rows: 1fr;
+    margin: 0;
+    align-self: start;
   }
-    
-  }
+}
 
-  .conteiner-block3-one{
-    
-    background-color: rgb(54, 58, 77) ;
-    width: 100%;
-    align-items: center;
-  }
+.conteiner-block3-one{
+  background-color: rgb(54, 58, 77) ;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.elements_conteiner_block3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.images-block3-one{
+   align-items: center;
   
-  .elements_conteiner_block3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-  .images-block3-one{
-     align-items: center;
-    
-  }
-  .circle-block3-border{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 113px;
+}
+.circle-block3-border{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 113px;
   height: 113px;
   gap: 0px;
   border-radius: 90px;
   opacity: 0px;
   border: 1px solid rgba(108, 113, 136, 1);
-  }
-  
-  .circle-block3-green{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(137, 194, 73, 1);
-    width: 93px;
-    height: 93px;
-    border-radius: 90px; 
-  }
-  
-  .text-block3{
-    font-family: Proxima Nova;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22.41px;
-  text-align: center;
+}
+
+.circle-block3-green{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(137, 194, 73, 1);
+  width: 93px;
+  height: 93px;
+  border-radius: 90px; 
+}
+
+.text-block3{
+font-family: Proxima Nova;
+font-size: 18px;
+font-weight: 400;
+line-height: 22.41px;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+}
+
+.carousel-card-block3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  background-color:  rgba(54, 58, 77, 1);
+  width: 360px;
+height: 482px;
+border-radius: 20px;
+opacity: 0px;
+}
+
+.carousel-block3-text1{
+  font-family: Proxima Nova;
+font-size: 22px;
+font-weight: 700;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: rgba(255, 255, 255, 1);
+}
+
+.carousel-block3-text2{
   color: rgba(255, 255, 255, 1);
-  }
-  
-  .carousel-card-block3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-    background-color:  rgba(54, 58, 77, 1);
-    width: 360px;
-  height: 482px;
-  border-radius: 20px;
-  opacity: 0px;
-  }
-  
-  .carousel-block3-text1{
-    font-family: Proxima Nova;
-  font-size: 22px;
+  font-family: Proxima Nova;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.92px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+.carousel-block3-images{
+  width: 360px;
+height: 229px;
+}
+
+.carousel-card-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap:9px;
+}
+
+.carousel-block3-ikon{
+  width: 22px;
+height: 22px;
+}
+
+#span-carousel-block3{
+  font-family: Proxima Nova;
+  font-size: 28px;
   font-weight: 700;
+  line-height: 27.39px;
   text-align: center;
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: rgba(255, 255, 255, 1);
+  text-decoration-skip-ink: none;  
+}
+
+.carousel-block3-button-request{
+  width: 153px;
+height: 50px;
+gap: 0px;
+border-radius: 90px;
+opacity: 0px;
+background-color: rgba(229, 141, 53, 1);
+color: rgb(255, 255, 255) ;
+font-family: Proxima Nova;
+font-size: 15px;
+font-weight: 600;
+line-height: 21.9px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.carousel-block3-button-detail{
+  width: 153px;
+height: 50px;
+gap: 0px;
+border-radius: 90px;
+border: 1px;
+opacity: 0px;
+border: 1px solid rgba(229, 141, 53, 1);
+color: rgb(255, 255, 255) ;
+font-family: Proxima Nova;
+font-size: 15px;
+font-weight: 600;
+line-height: 21.9px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+background-color: rgba(54, 58, 77, 1);
+
+}
+
+.slider-container {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+  @media screen and (max-width:1440px){
+    width: 740px;
   }
-  
-  .carousel-block3-text2{
-    color: rgba(255, 255, 255, 1);
-    font-family: Proxima Nova;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.92px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  @media screen and (max-width:768px){
+      width: 100%;
   }
-  
-  .carousel-block3-images{
-    width: 360px;
-  height: 229px;
-  }
-  
-  .carousel-card-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap:9px;
-  }
-  
-  .carousel-block3-ikon{
-    width: 22px;
-  height: 22px;
-  }
-  
-  #span-carousel-block3{
-    font-family: Proxima Nova;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 27.39px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;  
-  }
-  
-  .carousel-block3-button-request{
-    width: 153px;
+}
+
+.container-carousel {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
   height: 50px;
-  gap: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  @media screen and (max-width:1024px){
+      display: none;
+  }
+}
+
+.prev-button {
+  left: -70px;
+
+}
+
+.next-button {
+  right: -50px;
+}
+
+.pointer-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 50px 0;
+  gap: 20px;
+  @media screen and (min-width:375px){
+    display: none;
+}
+}
+
+.pointer {
+  height: 8px;
+  width: 8px;
   border-radius: 90px;
-  opacity: 0px;
-  background-color: rgba(229, 141, 53, 1);
-  color: rgb(255, 255, 255) ;
-  font-family: Proxima Nova;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 21.9px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  
-  }
-  .carousel-block3-button-detail{
-    width: 153px;
-  height: 50px;
-  gap: 0px;
-  border-radius: 90px;
-  border: 1px;
-  opacity: 0px;
-  border: 1px solid rgba(229, 141, 53, 1);
-  color: rgb(255, 255, 255) ;
-  font-family: Proxima Nova;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 21.9px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  background-color: rgba(54, 58, 77, 1);
-  
-  }
+  border: 2px solid #fff;
+}
 
-  .slider-container {
-    width: 1140px;
-    margin: 0 auto;
-    overflow: hidden;
-    @media screen and (max-width:1440px){
-      width: 740px;
-
-  }
-    @media screen and (max-width:375px){
-        width: 100%;
-
-    };
-   
-  }
-  
-  .container-carousel {
-    position: relative;
-    width: fit-content;
-    max-width: 100%;
-  }
-  
-  .slider {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
-    @media screen and (max-width:1440px){
-        display: none;
-
-    }
-  }
-  
-  .prev-button {
-    left: -70px;
-
-  }
-  
-  .next-button {
-    right: -50px;
-  }
+.active {
+  background: #fff;
+}
 
 //*** section 4  адаптацию делаем сразу в своей секции
 
