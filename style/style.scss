@@ -389,11 +389,296 @@ body {
 
 
 //*** section 5  адаптацию делаем сразу в своей секции
+// ПОСТОЯННЫЕ ВЕЛИЧИНЫ
+  // Параметры значков-бл5
+%imgParametrsbl5{
+    width: 27px;
+    height: 27px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+}
+  // Width block5
+$width1440Bl5: 1140px;
+$width768Bl5: 668px;
+$width375Bl5: 335px;
 
 
+.block-5{
+    width: $width1440Bl5;
+    height: 668px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: $mainBackgrColor;
+}
+// Значки стрелочек
+.arrow-circle-closed{
+    content: url('/public/block5/arrow-circle-closed.svg');
+}
+.arrow-circle-open{
+    content: url('/public/block5/arrow-circle-gold.svg');
+}
+.arrow-circle-closed,.arrow-circle-open{
+    @extend %imgParametrsbl5;
+}
 
+// Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+.title-blc5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:19px;
+    width: $width1440Bl5;
+    height: 66px;
+    margin-bottom: 49px;
+    font-size: 36px;
+    font-weight: 700;
+    // line-height:124.5%;
+    text-align: center;
+    color:#fff;
+    
+}
+// Черта под заголовком
+#line-blc5{
+    width: 85px;
+    height: 2px;
+}
 
+/* Обертка блок 5 (QA and Form) */
+.wrap-block5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:34px;
+    width: $width1440Bl5;
+    height:553px;
+    // margin-top: 49px;
+}
 
+// Блок Вопрос-QA
+.accordion{
+    height: 553px;
+}
+
+// Вопрос и ответ
+.acc-bl5{
+    width: 716px; 
+    margin-bottom: 16px; 
+    box-sizing: border-box;
+}
+
+/* ВОПРОС */
+.head-acc {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 34px;
+    padding-top: 21px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height:124.5%;
+    text-align: left;
+    color:#fff;
+    background-color: #363A4D;
+    cursor: pointer;
+    border: 1px solid #3A444E;
+    border-radius: 10px;
+    transition: 0.5s;
+} 
+
+// ОТВЕТ
+.answer-bl5 {
+    width: 716px;
+    height: 0px;
+    padding-left: 34px;
+    padding-right: 99px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 144.5%;
+    color: #282B38;
+    background-color: #fff;
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+} 
+
+/* ФОРМА БЛОК5*/
+.form-blc5{
+    width: 390px;
+    height: 553px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background-color: #3a444e9d;
+    border: 1px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+    
+/* Заголовок формы (бл.5) */
+.formtitle-blc5{
+    margin-left: 40px;
+    margin-right: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 126%;
+    text-align: left;
+    color: #FFF;
+}
+
+/* Подзаголовок формы (бл.5) */
+.formtext-blc5{
+    margin-top: 8px;
+    margin-right: 45px;
+    margin-left: 40px;
+    margin-bottom: 23px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 126%;
+    text-align: left;
+    color: #FFF;
+}
+    
+/* Окошки формы/инпуты (бл.5)-общие свойства */
+.input-blc5, .inputmessage-blc5{
+    width: 310px; 
+    margin-left: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 126%;
+    color:#CBCBCB;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-sizing:border-box;
+}
+
+/* Имя телефон емайл формы */
+.input-blc5{
+    height: 56px;
+    margin-bottom: 14px;
+}
+    
+/* Сообщение пользователя в форме */
+.inputmessage-blc5{
+    height: 70px;
+    margin-bottom: 26px;
+    padding-top: 19px;
+}
+    
+/* Кнопка "ОТПРАВИТЬ" (бл.5) */
+.button-blc5{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 310px;
+    height: 68px;
+    margin-left: 40px;
+    padding-left: 33px;
+    padding-right: 19px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #E58D35;
+    border: 1px solid #B16519;
+    border-radius: 90px;
+}
+
+    @media screen and (max-width:1024px) and (min-width:768px){
+        .block-5{
+            width: $width768Bl5;
+            height: 1200px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .title-blc5{
+            width: $width768Bl5;
+            height: 60px;
+            margin-bottom: 27px;
+            font-size: 24px;
+        }
+        .wrap-block5{
+            flex-direction: column;
+            align-items: center;
+            gap:28px;
+            width: $width768Bl5;
+            height:1100px;
+            // margin-top: 27px;
+        }
+        .acc-bl5{
+            width: 600px; 
+            box-sizing: border-box;
+        }
+        .head-acc{
+            padding-left: 22px;
+        }
+        .answer-bl5 {
+            width: 600px;
+            padding-left: 22px;
+        }
+        .formtitle-blc5, .formtext-blc5{
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width:767px) and (min-width:375px){
+        .block-5{
+            width: 375px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .title-blc5{
+            width: $width375Bl5;
+            height: 85px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 27px;
+            gap:23px;
+            font-size: 24px;
+        }
+        .wrap-block5{
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+            // margin-top: 27px;
+            width: $width375Bl5;
+        }
+        .acc-bl5{
+            width: $width375Bl5;
+        }
+        .head-acc{
+            padding-left: 22px;
+            font-size: 16px;
+        }
+        .answer-bl5 { 
+            padding-left: 22px;
+            padding-right: 30px;
+            width: $width375Bl5;
+            font-size: 14px;
+        }
+        // Forma
+        .form-blc5{
+            width: $width375Bl5;
+        }
+        /* Заголовок формы (бл.5) */
+        .formtitle-blc5{
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 15px;
+        }
+        .formtext-blc5{
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-right: 15px;
+            text-align: center;
+            font-size: 15px;
+        }   
+        /* Окошки формы/инпуты (бл.5)-общие свойства */
+        .input-blc5, .inputmessage-blc5, .button-blc5{
+            width: 295px; 
+            margin-left: 20px;
+        }
+    }
 
 //*** section 6  адаптацию делаем сразу в своей секции
 

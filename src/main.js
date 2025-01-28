@@ -1,4 +1,5 @@
 
+
 //import from part2
 import { formPriceCalc } from './part2';
 import { contactCustName } from './part2';
@@ -31,4 +32,4 @@ import { calcVolume } from './part2';
 import { buttonVol } from './part2';
 
 // formVol.addEventListener('submit', calcVolume);
-buttonVol.addEventListener('click', calcVolume)
+buttonVol.addEventListener('click', calcVolume);
