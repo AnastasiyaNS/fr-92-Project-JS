@@ -271,6 +271,9 @@ body {
             font-size: 0.6rem;
          }
     }
+    button:hover {
+        cursor: pointer;
+    }
     p {
         color: black;
         background-color: white;

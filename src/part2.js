@@ -1,32 +1,18 @@
 //contact form
-const formPriceCalc = document.forms.priceCalc;
+export const formPriceCalc = document.forms.priceCalc;
 const categoryCargo = formPriceCalc.elements.category;
 const weightCargo = formPriceCalc.elements.weight;
 const priceCargo = formPriceCalc.elements.price;
 const volumeCargo = formPriceCalc.elements.volume;
-const contactCustName = formPriceCalc.elements.customerName;
-const contactCustPhone = formPriceCalc.elements.customerPhone;
-const contactCustEmail = formPriceCalc.elements.customerEmail;
-const contactCustMsg = formPriceCalc.elements.userMsg;
-const btnCalcCargo = document.getElementById("part2_calc_button");
+export const contactCustName = formPriceCalc.elements.customerName;
+export const contactCustPhone = formPriceCalc.elements.customerPhone;
+export const contactCustEmail = formPriceCalc.elements.customerEmail;
+export const contactCustMsg = formPriceCalc.elements.userMsg;
+export const btnCalcCargo = document.getElementById("part2_calc_button");
 
 const priceCalcConf = document.getElementById("section2_formcalc_submitted");
 
-formPriceCalc.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const element = e.target;
-    validateName(contactCustName);
-    validatePhone(contactCustPhone);
-    validateEmail(contactCustEmail);
-    validateMsg(contactCustMsg);
-    
-    btnCalcCargo.addEventListener('click', (input)=> {
-        formSubmittedMsg(input);
-})
-})
-
-
-function validateName(input){
+export function validateName(input){
     const regex = /^[a-zA-Zа-яА-ЯЁё\s]+$/;
     const correctValue = input.value.trim();
     if (correctValue === ''){
@@ -34,30 +20,29 @@ function validateName(input){
         return;
      }
     if (regex.test(correctValue) === false) {
-        console.log("incorrect name!")
         showErrorMsg(input, "Имя должно состоять из букв и пробелов");
         return;
     } 
     closeErrorMsg(input);
+    return true;
 }
 
-function validateEmail(input){
+export function validateEmail(input){
     const correctValue = input.value.trim();
     const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (correctValue === '') {
-        console.log(correctValue)
         showErrorMsg(input, "Введите электронную почту");
         return;
     }
     if (regex.test(correctValue) === false) {
-        console.log("incorrect email!")
         showErrorMsg(input, "Неверный формат электронной почты");
         return;
     }
     closeErrorMsg(input);
+    return true;
 }
 
-function validatePhone(input){
+export function validatePhone(input){
     const correctValue = input.value.trim();
     const regex = /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/;
     if (correctValue === ''){
@@ -65,14 +50,14 @@ function validatePhone(input){
         return;
     }
     if (regex.test(correctValue) === false){
-        console.log("incorrect phone number!")
         showErrorMsg(input, "Введите корректный номер телефона");
         return;
     }
     closeErrorMsg(input);
+    return true;
 }
 
-function validateMsg(input){
+export function validateMsg(input){
     
     const correctValue = input.value.trim();
     if (correctValue === ''){
@@ -80,15 +65,13 @@ function validateMsg(input){
         return;
     }
     closeErrorMsg(input);
-    
+    return true;
 }
 
 function showErrorMsg(input, message){
     const parentElement = input.parentElement;
     const errorMsgPar = parentElement.querySelector(".part2_calc_errormsg");
     errorMsgPar.textContent = message;
-    console.log(errorMsgPar)
-    
     errorMsgPar.classList.remove("part2_calc_errormsg_none");
 }
 
@@ -97,6 +80,7 @@ function closeErrorMsg(input){
     const errorMsgPar = parentElement.querySelector(".part2_calc_errormsg");
     errorMsgPar.textContent = '';
     errorMsgPar.classList.add("part2_calc_errormsg_none");
+    return true;
 }
 
 function validateAll(inputs){
@@ -105,9 +89,9 @@ function validateAll(inputs){
         btnCalcCargo.disabled = false;
         return;
     }
-    //btnCalcCargo.disabled = true;
 }
-function formSubmittedMsg(){
+export function formSubmittedMsg(input){
+    
     priceCalcConf.classList.remove("section2_formcalc_submitted_none");
     priceCalcConf.classList.add("section2_formcalc_submitted");
     formPriceCalc.classList.add("part2_formcalc_none");
@@ -123,19 +107,17 @@ contactCustMsg.addEventListener('input', () => validateAll([contactCustName, con
 const formVol = document.forms.section2_modal_calcVolume;
 const buttonVol = document.getElementById("section2_modal_calcVolume_btn");
 
+buttonVol.addEventListener('click', calcVolume)
+
 function calcVolume(e){
     e.preventDefault();
+    
     const widthVol = +formVol.elements.width.value;
     const lengthVol = +formVol.elements.length1.value;
     const heightVol = +formVol.elements.height.value;
     const optionVolUnit = formVol.elements.units;
-    
-    console.log(widthVol)
-    console.log(heightVol)
-    console.log(lengthVol)
-    console.log(optionVolUnit.value);
-    
     const volumeFinal = lengthVol * widthVol * heightVol;
+    console.log(volumeFinal)
     document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal;
     if (optionVolUnit.value === 'mm') {
         document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal + ' мм3';
@@ -146,10 +128,42 @@ function calcVolume(e){
     if (optionVolUnit.value === 'meter') {
         document.getElementById("section2_modal_calcVolume_result").textContent = volumeFinal + ' м3';
     }
-}
-buttonVol.addEventListener('click', calcVolume)
 
-//modal window
+    //validation of volume calculator
+
+
+}
+
+// function validateUnitAmount(unit){
+//     const correctValue = unit.value;
+//     const regex = /^[0-9]*\.?[0-9]*$/;
+//     if (correctValue === '') {
+//         console.log("please enter correct number!")
+//         return;
+//     }
+//     if (regex.test(correctValue) === false){
+//         //showErrorMsg(input, "Возраст должен состоять из цифр")
+//         console.log("incorrect!")
+//         return;
+//     }
+// }
+
+// function validateAllUnits(units){
+//     const unitsErr = units.filter((unit) => units.value.trim() === '');
+//     if(unitsErr.length === 0) {
+//         buttonVol.disabled = false;
+//     }
+// }
+
+// widthVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
+// lengthVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
+// heightVol.addEventListener('input', () => validateAllUnits([widthVol, lengthVol, heightVol]));
+
+
+
+
+
+//Modal window of volume calculator
 const modalWindow = document.getElementById("section2_myModal");
 const openModalBtn = document.getElementById("part2_calc_volumecalc");
 const spanCloseModal = document.querySelector(".section2_close");
