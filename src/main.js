@@ -1,5 +1,6 @@
 
 import "./part3";
+import "./part5";
 
 //import from part2
 import { formPriceCalc } from './part2';

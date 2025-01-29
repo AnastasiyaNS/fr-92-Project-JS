@@ -23,7 +23,7 @@ accordionContent.forEach((item, index) => {
         question.style.backgroundColor="white";
     }else{
         question.style.color="white"
-        question.style.backgroundColor="#3A444E";
+        question.style.backgroundColor="#363A4d";
     }
     })
 })

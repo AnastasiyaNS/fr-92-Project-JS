@@ -1080,8 +1080,8 @@ background-color: rgba(54, 58, 77, 1);
 // ПОСТОЯННЫЕ ВЕЛИЧИНЫ
   // Параметры значков-бл5
 %imgParametrsbl5{
-    width: 27px;
-    height: 27px;
+    width: 47px;
+    height: 47px;
     padding-right: 20px;
     padding-bottom: 19px;
 }
@@ -1095,6 +1095,7 @@ $width375Bl5: 335px;
     height: 668px;
     margin-left: 150px;
     margin-right: 150px;
+    margin-bottom: 128px;
     background-color: $mainBackgrColor;
 }
 // Значки стрелочек
@@ -1151,6 +1152,8 @@ $width375Bl5: 335px;
     width: 716px; 
     margin-bottom: 16px; 
     box-sizing: border-box;
+    background-color:$mainBackgrColor;
+    
 }
 
 /* ВОПРОС */
@@ -1164,9 +1167,9 @@ $width375Bl5: 335px;
     line-height:124.5%;
     text-align: left;
     color:#fff;
-    background-color: #363A4D;
+    // background-color: #363A4D;
     cursor: pointer;
-    border: 1px solid #3A444E;
+    border: 1px solid #4d5269;
     border-radius: 10px;
     transition: 0.5s;
 } 
@@ -1193,7 +1196,7 @@ $width375Bl5: 335px;
     height: 553px;
     padding-top: 38px;
     padding-bottom: 38px;
-    background-color: #3a444e9d;
+    background-color: #363A4D;
     border: 1px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -1313,6 +1316,7 @@ $width375Bl5: 335px;
             width: 375px;
             margin-left: 0px;
             margin-right: 0px;
+            margin-bottom: 600px;
         }
         .title-blc5{
             width: $width375Bl5;
