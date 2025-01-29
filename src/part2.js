@@ -192,9 +192,14 @@ export function getCurrency(e){
     .then((data) => {
         const rateNumber = JSON.parse(data.data.mid);
         const result = currency_input_num * rateNumber;
-        currency_exch_sum.textContent = result.toFixed(2) + ' ' + currency_to_input.toUpperCase(); 
-        
+        const regex = /^-?\d*\.?\d+$/;
+        if (regex.test(currency_input_amount) === false){
+            currency_exch_error.innerHTML = "Пожалуйста, проверьте правильность введенных данных";
+            currency_exch_sum.textContent = "";
+        } else {
+             currency_exch_sum.textContent = result.toFixed(2) + ' ' + currency_to_input.toUpperCase(); 
         currency_exch_error.innerHTML = "";
+        }
 
     })
     .catch((error) => {
@@ -202,5 +207,7 @@ export function getCurrency(e){
         currency_exch_sum.textContent = "";
     }
         )
+
+
 }
 
