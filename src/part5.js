@@ -45,19 +45,21 @@ const form=document.getElementById('formBlc5');
 // console.log(formBlc5)
 
 function retrieveFormValue(event){
-event.preventDefault();
-
+  event.preventDefault();
+  
 const fields=document.querySelectorAll('input, textarea');
 const values={};
-
-fields.forEach(field => {
-const {name, value}=field;
-values[name]=value;
-});
-
-console.log(values)
-}
+ 
+  fields.forEach(field => {
+    const {name, value}=field;
+    values[name]=value;
+  });
+  
+  console.log(values)
+  form.reset();
+  }
 
 form.addEventListener('submit', retrieveFormValue);
+
 
 
