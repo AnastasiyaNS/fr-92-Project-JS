@@ -35,4 +35,8 @@ import { buttonVol } from './part2';
 
 // formVol.addEventListener('submit', calcVolume);
 buttonVol.addEventListener('click', calcVolume);
+// import for currency exch cacl
+import { buttonCurrencyCalc } from './part2';
+import { getCurrency } from './part2';
 
+buttonCurrencyCalc.addEventListener('click', getCurrency);

@@ -12,6 +12,11 @@ body {
     // align-items: center;
    }
 
+   .container {
+    display: flex;
+    flex-direction: column;
+    // align-content: center;
+   }
 //*** section 1  адаптацию делаем сразу в своей секции
 
 .header {
@@ -216,9 +221,10 @@ body {
 
 //*** section 2  адаптацию делаем сразу в своей секции
 #section2 {
+    align-self: center;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     @media screen and (max-width: 768px) {
         width: 90%;
         max-width: 90%;
@@ -406,13 +412,13 @@ body {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 20%;
+    width: 30%;
     border-radius: 20px;
     color: white;
     font-family: "Open Sans", serif;
     font-size: 0.8rem;
     @media screen and (max-width: 768px) {
-        width: 30%;
+        width: 50%;
         left: 0;
      }
     @media screen and (max-width: 375px) {
@@ -470,11 +476,11 @@ body {
         @media screen and (max-width: 768px) {
             width: 80%;
             max-width: 80%;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
          }
         @media screen and (max-width: 375px) {
-            width: 80%;
-            max-width: 80%;
+            width: 40%;
+            max-width: 40%;
             font-size: 0.6rem;
          }
     }
@@ -491,8 +497,9 @@ body {
         margin-top: 20px;
         border-radius: 10px;
         align-self: flex-end;
-        width: 30%;
+        width: 40%;
         max-width: 60%;
+        min-height: 20px;
         height: 20px;
         text-align: end;
     }
@@ -507,19 +514,41 @@ body {
 
 
 /// calculator
-// .section2_curr_exch {
-//     display: flex;
-// }
+.section2_curr_exch {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+        width: 100%;
+     }
+    @media screen and (max-width: 375px) {
+        max-width: 100%;
+        width: 100%;
+     }
+ }
 .currency_exch_calc {
     display: flex;
     flex-direction: column;
     //justify-content: center;
     //margin: 0 auto;
-    max-width: 50%;
+    min-width: 50%;
+    max-width: 80%;
     background-color: #767c9645;
     border-radius: 20px;
     padding: 30px;
     font-family: "Open Sans", serif;
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+        width: 100%;
+     }
+    @media screen and (max-width: 375px) {
+        max-width: 100%;
+        width: 100%;
+     }
     label {
         padding: 5px;
     }
@@ -532,7 +561,7 @@ body {
     button {
         width: 60%;
         max-width: 80%;
-        margin-top: 20px;
+        margin-top: 25px;
         background-color: #E58D35;
         font-family: "Open Sans", serif;
         color: white;
@@ -540,15 +569,8 @@ body {
         padding: 15px;
         border: none;
     }
-    p {
-        color: black;
-        background-color: white;
-        padding: 15px;
-        margin-top: 20px;
-        border-radius: 10px;
-        align-self: flex-end;
-        width: 50%;
-        max-width: 80%;
+    button:hover {
+        cursor: pointer;
     }
 }
 .currency_exch_calc_item {
@@ -559,6 +581,33 @@ body {
     font-size: 0.8rem;
     color: white;
 }
+.currency_exch_calc_errormsg {
+    color: red;
+    font-family: "Open Sans", serif;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    @media screen and (max-width: 768px) {
+        font-size: 10px;
+     }
+    @media screen and (max-width: 375px) {
+        font-size: 9px;
+     }
+}
+#currency_exch_calc_final_sum {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        align-self: flex-end;
+        width: 50%;
+        max-width: 80%;
+        min-height: 20px;
+        text-align: end;
+    }
+
 .currency_exch_calc_final {
     display: flex;
     flex-direction: column;
