@@ -689,21 +689,21 @@
   <div class="form-blc5">
     <p class="formtitle-blc5">Остались вопросы?</p>
     <p class="formtext-blc5">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
-    <form action="#" id="testform">
+    <form action="#" method="post" id="formBlc5">
       <div>
-        <input class="input-blc5" type="text" placeholder="Имя*" />
+        <input class="input-blc5" type="text" placeholder="Имя*" name="name" value="" required/>
       </div>
       <div>
-        <input class="input-blc5" type="text" placeholder="Телефон*" />
+        <input class="input-blc5" type="text" name="phone" placeholder="Телефон*" value="" required />
       </div>
       <div>
-        <input type="text" class="input-blc5" placeholder="Email" />
+        <input type="text" class="input-blc5" name="email" placeholder="Email" value="" required />
       </div>
       <div>
-        <textarea class="inputmessage-blc5" placeholder="Ваш вопрос"></textarea>
+        <textarea class="inputmessage-blc5" placeholder="Ваш вопрос" value=""></textarea>
       </div>
       <div>
-        <button class="button-blc5" type="button" value="Отправить запрос">Отправить запрос
+        <button class="button-blc5" type="submit" value="Отправить запрос">Отправить запрос
           <img src="/block5/arrow-circle-btn.svg" id="img-blc5">
         </button>
       </div>
