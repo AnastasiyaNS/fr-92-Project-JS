@@ -1149,10 +1149,10 @@ $width375Bl5: 335px;
 }
 // Значки стрелочек
 .arrow-circle-closed{
-    content: url('/public/block5/arrow-circle-closed.svg');
+    content: url('/public/part5/arrow-circle-closed.svg');
 }
 .arrow-circle-open{
-    content: url('/public/block5/arrow-circle-gold.svg');
+    content: url('/public/part5/arrow-circle-gold.svg');
 }
 .arrow-circle-closed,.arrow-circle-open{
     @extend %imgParametrsbl5;

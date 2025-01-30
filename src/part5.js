@@ -41,7 +41,7 @@ function removeOpen(index1){
 
 // Forma
 
-const form=document.getElementById('formBlc5');
+const formBlcFive=document.getElementById('formBlc5');
 // console.log(formBlc5)
 
 function retrieveFormValue(event){
@@ -56,10 +56,10 @@ const values={};
   });
   
   console.log(values)
-  form.reset();
+  formBlcFive.reset();
   }
 
-form.addEventListener('submit', retrieveFormValue);
+formBlcFive.addEventListener('submit', retrieveFormValue);
 
 
 
