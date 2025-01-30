@@ -175,34 +175,39 @@ function closeModalGeneral(event) {
 }
 
 // currency calculator
-const buttonCurrencyCalc = document.getElementById("currency_exch_calc_calc");
+export const buttonCurrencyCalc = document.getElementById("currency_exch_calc_calc");
 
-function getCurrency(e){
+export function getCurrency(e){
     e.preventDefault();
     const formCurrency = document.forms.currency_exch_calc;
     const currency_from_input = formCurrency.elements.currency_from_input.value;
     const currency_to_input = formCurrency.elements.currency_to_input.value;
     const currency_input_amount = formCurrency.elements.currency_input_amount.value;
     const currency_input_num = +currency_input_amount;
-    const sum = document.getElementById("currency_exch_calc_final_sum");
+    const currency_exch_error = document.getElementById("currency_exch_calc_errormsg");
+    const currency_exch_sum = document.getElementById("currency_exch_calc_final_sum");
 
     fetch(`https://hexarate.paikama.co/api/rates/latest/${currency_from_input}?target=${currency_to_input}`)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
-        console.log(data.data)
         const rateNumber = JSON.parse(data.data.mid);
-        console.log(rateNumber)
         const result = currency_input_num * rateNumber;
-        console.log(result)
-        sum.textContent = result.toFixed(2);
+        const regex = /^-?\d*\.?\d+$/;
+        if (regex.test(currency_input_amount) === false){
+            currency_exch_error.innerHTML = "Пожалуйста, проверьте правильность введенных данных";
+            currency_exch_sum.textContent = "";
+        } else {
+             currency_exch_sum.textContent = result.toFixed(2) + ' ' + currency_to_input.toUpperCase(); 
+        currency_exch_error.innerHTML = "";
+        }
 
     })
     .catch((error) => {
-        console.log("error", error)
-        sum.innerHTML = "Пожалуйста, проверьте правильность введенных данных";
+        currency_exch_error.innerHTML = "Пожалуйста, проверьте правильность введенных данных";
+        currency_exch_sum.textContent = "";
     }
         )
+
+
 }
 
-buttonCurrencyCalc.addEventListener('click', getCurrency);

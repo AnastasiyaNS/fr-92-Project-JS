@@ -81,7 +81,9 @@
               <li></li>
           </ul>
       </div>
-      <section id="section2">
+      </section>
+        
+         <section id="section2">
         <div class="section2_calc_part">
           <form class="part2_formcalc" name="priceCalc">
             <h1>Оставьте заявку на расчет стоимости вашего груза</h1>
@@ -192,7 +194,7 @@
 
             <div class="currency_exch_calc_item">
                 <label for="currency_input_amount">Введите сумму в формате XXX.XX</label>
-                <input name="currency_input_amount" id="currency_input_amount" type="text" placeholder="XXX.XX" pattern="^[0-9]*\.?[0-9]*$">
+                <input name="currency_input_amount" id="currency_input_amount" type="text" placeholder="XXX.XX">
             </div>
     
             <div class="currency_exch_calc_item">
@@ -204,6 +206,7 @@
                 <label for="currency_to_input">Укажите валюту латиницей, напр. USD</label>
                 <input name="currency_to_input" id="currency_to_input" type="text" placeholder="Валюта, напр. USD">
             </div>
+            <p class="currency_exch_calc_errormsg" id="currency_exch_calc_errormsg"></p>
             <div class="currency_exch_calc_final">
                 <button id="currency_exch_calc_calc">Рассчитать</button>
                 <p id="currency_exch_calc_final_sum"></p>
@@ -334,7 +337,7 @@
           </div>
         </div>
 
-        </div>
+       
 
         <div class="conteiner-block3-two">
           <div class="title-block3">
@@ -685,7 +688,7 @@
     <p class="formtext-blc5">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
     <form action="#" method= "POST" id="formBlc5">
       <div>
-        <input class="input-blc5" type="text" placeholder="Имя*" name="name" value="" required>
+        <input class="input-blc5" type="text" placeholder="Имя*" name="name" value="" required id="nameUserForm5">
       </div>
       <div>
         <input class="input-blc5" type="tel" name="phone" placeholder="Телефон*" value="" required>
@@ -694,11 +697,11 @@
         <input type="email" class="input-blc5" name="email" placeholder="Email" value="" required>
       </div>
       <div>
-        <textarea class="inputmessage-blc5" name= "message" placeholder="Ваш вопрос" value=""></textarea>
+        <textarea class="inputmessage-blc5" name= "message" placeholder="Ваш вопрос" value="" required></textarea>
       </div>
       <div>
-        <button class="button-blc5" type="submit" value="Отправить запрос">Отправить запрос
-          <img src="/block5/arrow-circle-btn.svg" id="img-blc5">
+        <button class="button-blc5" type="submit" value="Отправить запрос" >Отправить запрос
+          <img src="/part5/arrow-circle-btn.svg" id="img-blc5">
         </button>
       </div>
     </form>
@@ -838,6 +841,7 @@
         </footer>
 
     </div>
+  </div>
     <script type="module" src="/src/main.js"></script>
 
   </body>
