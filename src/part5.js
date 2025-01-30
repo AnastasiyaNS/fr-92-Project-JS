@@ -40,26 +40,47 @@ function removeOpen(index1){
 }
 
 // Forma
+// const formBlcFive=document.getElementById('formBlc5');
+// // console.log(formBlc5)
+
+// function retrieveFormValue(event){
+//   event.preventDefault();
+  
+// const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
+// const values={};
+ 
+//   fields.forEach(field => {
+//     const {name, value}=field;
+//     values[name]=value;
+//   });
+  
+//   console.log(values)
+// formBlcFive.reset();
+//  }
+//  formBlcFive.addEventListener('submit', retrieveFormValue);
+
 
 const formBlcFive=document.getElementById('formBlc5');
 // console.log(formBlc5)
 
 function retrieveFormValue(event){
-  event.preventDefault();
-  
-const fields=document.querySelectorAll('input, textarea');
+event.preventDefault();
+
+const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
 const values={};
- 
-  fields.forEach(field => {
+
+fields.forEach(field => {
     const {name, value}=field;
     values[name]=value;
-  });
-  
-  console.log(values)
-  formBlcFive.reset();
-  }
+});
+
+console.log(values)
+formBlcFive.reset();
+}
 
 formBlcFive.addEventListener('submit', retrieveFormValue);
+
+
 
 
 
