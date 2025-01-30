@@ -1,4 +1,4 @@
-// Block5
+// Block5-Accordion
 const accordionContent = document.querySelectorAll(".acc-bl5");
 
 accordionContent.forEach((item, index) => {
@@ -43,23 +43,98 @@ function removeOpen(index1){
 
 
 
-
-const form=document.getElementById('formBlc5');
+// Block5-Form
+const formBlcFive=document.getElementById('formBlc5');
 // console.log(formBlc5)
+// Валидация
+const nameUserBlc5=formBlcFive.elements.nameUserBlc5;
+function validateName(input){
+    const regex = /^[a-zA-Zа-яА-ЯЁё\s]+$/;
+    const correctValue = input.value.trim();
+    if (correctValue === ''){
+        showErrorMsg(input, 'Введите имя')
+        return;
+     }
+    if (regex.test(correctValue) === false) {
+        showErrorMsg(input, "Имя должно состоять из букв и пробелов");
+        return;
+    } 
+    closeErrorMsg(input);
+    return true;
+}
+const phoneUserBlc5=formBlcFive.elements.phoneUserBlc5;
+function validatePhone(input){
+    const correctValue = input.value.trim();
+    const regex = /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/;
+    if (correctValue === ''){
+        showErrorMsg(input, "Введите номер телефона")
+        return;
+    }
+    if (regex.test(correctValue) === false){
+        showErrorMsg(input, "Введите корректный номер телефона");
+        return;
+    }
+    closeErrorMsg(input);
+    return true;
+}
+
+function showErrorMsg(input, message){
+    const parentElement = input.parentElement;
+    const errorMsgPar = parentElement.querySelector(".block5_form_errormsg");
+    errorMsgPar.textContent = message;
+    errorMsgPar.classList.remove("block5_form_errormsg_none");
+}
+
+function closeErrorMsg(input){
+    const parentElement = input.parentElement;
+    const errorMsgPar = parentElement.querySelector(".block5_form_errormsg");
+    errorMsgPar.textContent = '';
+    errorMsgPar.classList.add("block5_form_errormsg_none");
+    return true;
+}
+
+const priceCalcConf = document.getElementById("section2_formcalc_submitted");
+function formSubmittedMsg(input){
+    
+    priceCalcConf.classList.remove("section2_formcalc_submitted_none");
+    priceCalcConf.classList.add("section2_formcalc_submitted");
+    formBlcFive.classList.add("part2_formcalc_none");
+}
+
+
+
+nameUserBlc5.addEventListener('input', () => validateName(nameUserBlc5));
+phoneUserBlc5.addEventListener('input', () => validatePhone(phoneUserBlc5));
+
+
+
 
 function retrieveFormValue(event){
-  event.preventDefault();
-  
-const fields=document.querySelectorAll('input, textarea');
+event.preventDefault();
+
+const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
 const values={};
- 
-  fields.forEach(field => {
+
+fields.forEach(field => {
     const {name, value}=field;
     values[name]=value;
-  });
-  
-  console.log(values)
-  form.reset();
-  }
+});
 
-form.addEventListener('submit', retrieveFormValue);
+console.log(values)
+formBlcFive.reset();
+}
+
+// formBlcFive.addEventListener('submit', retrieveFormValue);
+
+const btnCalcCargo = document.getElementById("button-blc5");
+btnCalcCargo.addEventListener('click', (input) => {
+    formBlcFive.addEventListener("submit", (e) => {
+             e.preventDefault();
+             validateName(nameUserBlc5);
+                validatePhone(phoneUserBlc5);
+               
+             if (validateName(nameUserBlc5) && validatePhone(phoneUserBlc5)) {
+                formSubmittedMsg(input)       
+            }
+        })
+    })
