@@ -1,6 +1,5 @@
 import "./part3";
 import "./part5";
-import "./part1";
 
 
 //import from part2
