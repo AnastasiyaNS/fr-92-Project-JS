@@ -1,7 +1,28 @@
-import "./part1"
 import "./part3";
 import "./part5";
 
+import { burger, sliderBlock1, items, prev, next, dots, lengthItems, activeBlock1, refreshInterval } from './part1';
+import { nextToggle } from './part1';
+import { prevToggle} from './part1';
+import { reloadSlider } from './part1';
+burger.addEventListener('click', function(){
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+})
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+    activeBlock1 = key;
+    reloadSlider();
+    })
+})
+function nextToggle(){
+    activeBlock1 = activeBlock1 + 1 <= lengthItems ? activeBlock1 + 1 : 0;
+    reloadSlider();
+}
+function prevToggle(){
+    activeBlock1 = activeBlock1 - 1 >= 0 ? activeBlock1 - 1 : lengthItems;
+    reloadSlider();
+}
 
 //import from part2
 import { formPriceCalc } from './part2';
