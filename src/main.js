@@ -1,3 +1,4 @@
+import "./part1"
 import "./part3";
 import "./part5";
 
