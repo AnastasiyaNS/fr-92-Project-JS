@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('/assets/fonts/proximanova_regular.ttf')
+}
+
 $mainBackgrColor: #282b38;
 $lightColor: #767c9645;
 $buttonColor: #e58d35;
-$font: "Figtree", serif;
+$font: "Proxima Nova", serif;
 
 body {
 
@@ -283,7 +288,7 @@ body {
 }
 #section2 form h1 {
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     text-transform: uppercase;
     @media screen and (max-width: 375px) {
        font-size: 1rem;
@@ -293,13 +298,13 @@ body {
 }
 .part2_calc {
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.8rem;
 }
 .part2_calc_input {
-    font-family: "Open Sans", serif;
+    font-family: $font;
     //color: #CBCBCB;
     color: black;
     padding: 10px;
@@ -310,7 +315,7 @@ body {
     margin-top: 20px;
     color: #CBCBCB;
     padding: 10px;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     border: 3px $lightColor dashed;
     border-radius: 10px;
@@ -322,7 +327,7 @@ body {
 // }
 .part2_calc_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
 }
 .part2_calc_errormsg_none {
     display: none !important;
@@ -349,7 +354,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     color: white;
     padding: 30px;
     width: 100%;
@@ -415,7 +420,7 @@ body {
     width: 30%;
     border-radius: 20px;
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     @media screen and (max-width: 768px) {
         width: 50%;
@@ -468,7 +473,7 @@ body {
         max-width: 60%;
         margin-top: 20px;
         background-color: #E58D35;
-        font-family: "Open Sans", serif;
+        font-family: $font;
         color: white;
         border-radius: 30px;
         padding: 15px;
@@ -506,7 +511,7 @@ body {
 }
 .section2_modal_calcVolume_item_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     height: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -540,7 +545,7 @@ body {
     background-color: #767c9645;
     border-radius: 20px;
     padding: 30px;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     @media screen and (max-width: 768px) {
         max-width: 100%;
         width: 100%;
@@ -563,7 +568,7 @@ body {
         max-width: 80%;
         margin-top: 25px;
         background-color: #E58D35;
-        font-family: "Open Sans", serif;
+        font-family: $font;
         color: white;
         border-radius: 30px;
         padding: 15px;
@@ -577,13 +582,13 @@ body {
     display: flex;
     flex-direction: column;
     //justify-content: center;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     color: white;
 }
 .currency_exch_calc_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     height: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
