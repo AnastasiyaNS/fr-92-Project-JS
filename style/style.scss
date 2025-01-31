@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('/assets/fonts/proximanova_regular.ttf')
+}
+
 $mainBackgrColor: #282b38;
-$lightColor: #767c9645;
+$lightColor: #363A4D;
 $buttonColor: #e58d35;
-$font: "Figtree", serif;
+$font: "Proxima Nova", serif;
 
 body {
 
@@ -283,7 +288,7 @@ body {
 }
 #section2 form h1 {
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     text-transform: uppercase;
     @media screen and (max-width: 375px) {
        font-size: 1rem;
@@ -293,13 +298,13 @@ body {
 }
 .part2_calc {
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.8rem;
 }
 .part2_calc_input {
-    font-family: "Open Sans", serif;
+    font-family: $font;
     //color: #CBCBCB;
     color: black;
     padding: 10px;
@@ -310,7 +315,7 @@ body {
     margin-top: 20px;
     color: #CBCBCB;
     padding: 10px;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     border: 3px $lightColor dashed;
     border-radius: 10px;
@@ -322,7 +327,7 @@ body {
 // }
 .part2_calc_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
 }
 .part2_calc_errormsg_none {
     display: none !important;
@@ -349,7 +354,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     color: white;
     padding: 30px;
     width: 100%;
@@ -415,7 +420,7 @@ body {
     width: 30%;
     border-radius: 20px;
     color: white;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     @media screen and (max-width: 768px) {
         width: 50%;
@@ -433,12 +438,14 @@ body {
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
     select {
         padding: 10px;
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
   }
   .section2_close {
@@ -468,7 +475,7 @@ body {
         max-width: 60%;
         margin-top: 20px;
         background-color: #E58D35;
-        font-family: "Open Sans", serif;
+        font-family: $font;
         color: white;
         border-radius: 30px;
         padding: 15px;
@@ -479,8 +486,8 @@ body {
             font-size: 0.6rem;
          }
         @media screen and (max-width: 375px) {
-            width: 40%;
-            max-width: 40%;
+            width: 60%;
+            max-width: 60%;
             font-size: 0.6rem;
          }
     }
@@ -500,13 +507,19 @@ body {
         width: 40%;
         max-width: 60%;
         min-height: 20px;
-        height: 20px;
+        height: 3rem;
         text-align: end;
+        font-family: $font;
+        @media screen and (max-width: 375px) {
+          width: 60%;
+          max-width: 60%;
+          font-size: 0.8rem;
+       }
     }
 }
 .section2_modal_calcVolume_item_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     height: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -537,10 +550,10 @@ body {
     //margin: 0 auto;
     min-width: 50%;
     max-width: 80%;
-    background-color: #767c9645;
+    background-color: $lightColor;
     border-radius: 20px;
     padding: 30px;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     @media screen and (max-width: 768px) {
         max-width: 100%;
         width: 100%;
@@ -557,13 +570,14 @@ body {
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
     button {
         width: 60%;
         max-width: 80%;
         margin-top: 25px;
         background-color: #E58D35;
-        font-family: "Open Sans", serif;
+        font-family: $font;
         color: white;
         border-radius: 30px;
         padding: 15px;
@@ -577,13 +591,13 @@ body {
     display: flex;
     flex-direction: column;
     //justify-content: center;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     font-size: 0.8rem;
     color: white;
 }
 .currency_exch_calc_errormsg {
     color: red;
-    font-family: "Open Sans", serif;
+    font-family: $font;
     height: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -604,7 +618,7 @@ body {
         align-self: flex-end;
         width: 50%;
         max-width: 80%;
-        min-height: 20px;
+        min-height: 3rem;
         text-align: end;
     }
 
@@ -1127,7 +1141,7 @@ background-color: rgba(54, 58, 77, 1);
 //*** section 5  адаптацию делаем сразу в своей секции
 
 // ПОСТОЯННЫЕ ВЕЛИЧИНЫ
-  // Параметры значков-бл5
+  // Images of Block5
 %imgParametrsbl5{
     width: 47px;
     height: 47px;
@@ -1139,15 +1153,58 @@ $width1440Bl5: 1140px;
 $width768Bl5: 668px;
 $width375Bl5: 335px;
 
+// Message Block5
+.block5_form_errormsg {
+  color: white;
+ font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.block5_form_errormsg_none {
+  display: none !important;
+}
+
+.block5_form_submitted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+      h2 {
+          width: 400px;
+          max-width: 100%;
+      }
+      p {
+          width: 400px;
+          max-width: 100%;
+      }
+  @media screen and (max-width: 375px) {
+      width: 100%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+}
+.block5_form_submitted_none {
+  display: none !important;
+}
+.block5_form_none {
+  display: none;
+}
+
 .block-5{
     width: $width1440Bl5;
     height: 668px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 128px;
+    margin: 0px 150px 128px 150px;
+    // margin-left: 150px;
+    // margin-right: 150px;
+    // margin-bottom: 128px;
     background-color: $mainBackgrColor;
 }
-// Значки стрелочек
+// Symbols arrow
 .arrow-circle-closed{
     content: url('/public/part5/arrow-circle-closed.svg');
 }
@@ -1158,7 +1215,7 @@ $width375Bl5: 335px;
     @extend %imgParametrsbl5;
 }
 
-// Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+// Title-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
 .title-blc5{
     display: flex;
     flex-direction: column;
@@ -1174,13 +1231,13 @@ $width375Bl5: 335px;
     color:#fff;
     
 }
-// Черта под заголовком
+// Line under Title of Blc5
 #line-blc5{
     width: 85px;
     height: 2px;
 }
 
-/* Обертка блок 5 (QA and Form) */
+// WRAP of Block5(QA and Form) 
 .wrap-block5{
     display: flex;
     flex-direction: row;
@@ -1188,15 +1245,14 @@ $width375Bl5: 335px;
     gap:34px;
     width: $width1440Bl5;
     height:553px;
-    // margin-top: 49px;
 }
 
-// Блок Вопрос-QA
+// Accordion Blc5
 .accordion{
     height: 553px;
 }
 
-// Вопрос и ответ
+// Question and Answer (blc5)
 .acc-bl5{
     width: 716px; 
     margin-bottom: 16px; 
@@ -1205,7 +1261,7 @@ $width375Bl5: 335px;
     
 }
 
-/* ВОПРОС */
+//  Question Blc5 
 .head-acc {
     display: flex;
     justify-content: space-between;
@@ -1216,14 +1272,13 @@ $width375Bl5: 335px;
     line-height:124.5%;
     text-align: left;
     color:#fff;
-    // background-color: #363A4D;
     cursor: pointer;
     border: 1px solid #4d5269;
     border-radius: 10px;
     transition: 0.5s;
 } 
 
-// ОТВЕТ
+// Answer-Blc5 
 .answer-bl5 {
     width: 716px;
     height: 0px;
@@ -1234,12 +1289,12 @@ $width375Bl5: 335px;
     line-height: 144.5%;
     color: #282B38;
     background-color: #fff;
-    overflow: hidden; 
+    overflow:auto; 
     border-radius: 10px; 
     box-sizing: border-box;
 } 
 
-/* ФОРМА БЛОК5*/
+// Form-Blc5
 .form-blc5{
     width: 390px;
     height: 553px;
@@ -1249,9 +1304,10 @@ $width375Bl5: 335px;
     border: 1px;
     border-radius: 20px;
     box-sizing: border-box;
+    
     }
     
-/* Заголовок формы (бл.5) */
+// Formtitle-blc5
 .formtitle-blc5{
     margin-left: 40px;
     margin-right: 45px;
@@ -1264,20 +1320,16 @@ $width375Bl5: 335px;
     color: #FFF;
 }
 
-/* Подзаголовок формы (бл.5) */
+// Text of Form Blc5 
 .formtext-blc5{
-    margin-top: 8px;
-    margin-right: 45px;
-    margin-left: 40px;
-    margin-bottom: 23px;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 126%;
-    text-align: left;
-    color: #FFF;
+  margin: 8px 45px 23px 40px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 126%;
+  text-align: left;
+  color: #FFF;
 }
     
-/* Окошки формы/инпуты (бл.5)-общие свойства */
 .input-blc5, .inputmessage-blc5{
     width: 310px; 
     margin-left: 40px;
@@ -1291,20 +1343,20 @@ $width375Bl5: 335px;
     box-sizing:border-box;
 }
 
-/* Имя телефон емайл формы */
+// Name, phone, email of Form Blc5
 .input-blc5{
     height: 56px;
     margin-bottom: 14px;
 }
     
-/* Сообщение пользователя в форме */
+// User message of Form Blc5
 .inputmessage-blc5{
     height: 70px;
     margin-bottom: 26px;
     padding-top: 19px;
 }
     
-/* Кнопка "ОТПРАВИТЬ" (бл.5) */
+// Button of form Blc5
 .button-blc5{
     display: flex;
     flex-direction: row;
@@ -1320,6 +1372,7 @@ $width375Bl5: 335px;
     background-color: #E58D35;
     border: 1px solid #B16519;
     border-radius: 90px;
+    cursor: pointer;
 }
 
 
@@ -1342,7 +1395,6 @@ $width375Bl5: 335px;
             gap:28px;
             width: $width768Bl5;
             height:1100px;
-            // margin-top: 27px;
         }
         .acc-bl5{
             width: 600px; 
@@ -1370,9 +1422,8 @@ $width375Bl5: 335px;
         .title-blc5{
             width: $width375Bl5;
             height: 85px;
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-bottom: 27px;
+            margin: 0px 20px 27px 20px;
+            
             gap:23px;
             font-size: 24px;
         }
@@ -1381,7 +1432,6 @@ $width375Bl5: 335px;
             align-items: center;
             margin-left: 20px;
             margin-right: 20px;
-            // margin-top: 27px;
             width: $width375Bl5;
         }
         .acc-bl5{
@@ -1401,20 +1451,17 @@ $width375Bl5: 335px;
         .form-blc5{
             width: $width375Bl5;
         }
-        /* Заголовок формы (бл.5) */
         .formtitle-blc5{
             text-align: center;
-            margin-left: 20px;
+            margin-left: 15px;
             margin-right: 15px;
         }
         .formtext-blc5{
             margin-right: 20px;
             margin-left: 20px;
-            margin-right: 15px;
             text-align: center;
             font-size: 15px;
         }   
-        /* Окошки формы/инпуты (бл.5)-общие свойства */
         .input-blc5, .inputmessage-blc5, .button-blc5{
             width: 295px; 
             margin-left: 20px;

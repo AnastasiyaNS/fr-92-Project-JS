@@ -84,7 +84,7 @@
       </section>
       <section id="section2">
         <div class="section2_calc_part">
-          <form class="part2_formcalc" name="priceCalc">
+          <form id="form-section2" class="part2_formcalc" name="priceCalc">
             <h1>Оставьте заявку на расчет стоимости вашего груза</h1>
             <div class="section2_formcalc">
               <div class="part2_formcalc1">
@@ -372,11 +372,11 @@
                       OT <span id="span-carousel-block3">2,5</span> $/кг
                     </p>
                     <div>
-                      <button class="carousel-block3-button-request">
-                        Оставить заявку
-                      </button>
-                      <button class="carousel-block3-button-detail">
-                        Подробнее
+                      <button class="carousel-block3-button-request" >
+                        <a href="#form-section2">Оставить заявку
+                        </a></button>
+                      <button class="carousel-block3-button-detail"> <a href="#section5">
+                        Подробнее </a>
                       </button>
                     </div>
                   </div>
@@ -408,11 +408,11 @@
                       OT <span id="span-carousel-block3">2,5</span> $/кг
                     </p>
                     <div>
-                      <button class="carousel-block3-button-request">
-                        Оставить заявку
+                      <button class="carousel-block3-button-request"><a href="#form-section2">
+                        Оставить заявку </a>
                       </button>
-                      <button class="carousel-block3-button-detail">
-                        Подробнее
+                      <button class="carousel-block3-button-detail"> <a href="#section5">
+                        Подробнее </a>
                       </button>
                     </div>
                   </div>
@@ -443,11 +443,11 @@
                       OT <span id="span-carousel-block3">2,5</span> $/кг
                     </p>
                     <div>
-                      <button class="carousel-block3-button-request">
-                        Оставить заявку
+                      <button class="carousel-block3-button-request"><a href="#form-section2">
+                        Оставить заявку </a>
                       </button>
-                      <button class="carousel-block3-button-detail">
-                        Подробнее
+                      <button class="carousel-block3-button-detail"><a href="#section5">
+                        Подробнее </a>
                       </button>
                     </div>
                   </div>
@@ -477,11 +477,11 @@
                       OT <span id="span-carousel-block3">2,5</span> $/кг
                     </p>
                     <div>
-                      <button class="carousel-block3-button-request">
-                        Оставить заявку
+                      <button class="carousel-block3-button-request"><a href="#form-section2">
+                        Оставить заявку </a>
                       </button>
-                      <button class="carousel-block3-button-detail">
-                        Подробнее
+                      <button class="carousel-block3-button-detail"><a href="#section5">
+                        Подробнее </a>
                       </button>
                     </div>
                   </div>
@@ -512,11 +512,11 @@
                       OT <span id="span-carousel-block3">2,5</span> $/кг
                     </p>
                     <div>
-                      <button class="carousel-block3-button-request">
-                        Оставить заявку
+                      <button class="carousel-block3-button-request"> <a href="#form-section2">
+                        Оставить заявку </a>
                       </button>
-                      <button class="carousel-block3-button-detail">
-                        Подробнее
+                      <button class="carousel-block3-button-detail"><a href="#section5">
+                        Подробнее </a>
                       </button>
                     </div>
                   </div>
@@ -633,7 +633,7 @@
       <section id="section5">
         <article class="block-5">
           <p class="title-blc5">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
-          <img src="/block5/line-5bl.svg" id="line-blc5"></p>
+          <img src="/part5/line-5bl.svg" id="line-blc5"></p>
           <div class="wrap-block5">
             <div class="accordion">
             <div class="acc-bl5">
@@ -671,7 +671,7 @@
                 <div class="question-blc5">В чём особенность КАРГО доставки из Китая?</div>
                 <i class="arrow-circle-closed"></i>
               </div>
-              <div class="answer-bl5">Если рассматривать процедуру в упрощенном варианте, речь идет о перевозке груза «под ключ», когда посредник полностью организует транспортировку, оказывая полный пакет услуг. От клиента обычно требуется только оплатить установленный тариф и забрать свой груз. В ряде случаев это очень удобно. В частности, отправителю или получателю не нужно самостоятельно заниматься оформлением сертификатов, заполнением таможенных деклараций и т.п.</div>
+              <div class="answer-bl5">Речь идет о перевозке груза «под ключ», когда посредник полностью организует транспортировку, оказывая полный пакет услуг. От клиента обычно требуется только оплатить установленный тариф и забрать свой груз. Отправителю или получателю не нужно самостоятельно заниматься оформлением сертификатов, заполнением таможенных деклараций и т.п.</div>
             </div>
             <div class="acc-bl5">
               <div class="head-acc">
@@ -682,30 +682,38 @@
             </div>
             </div> 
   
-  <div class="form-blc5">
-    <p class="formtitle-blc5">Остались вопросы?</p>
-    <p class="formtext-blc5">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
-    <form action="#" method= "POST" id="formBlc5">
-      <div>
-        <input class="input-blc5" type="text" placeholder="Имя*" name="name" value="" required id="nameUserForm5">
-      </div>
-      <div>
-        <input class="input-blc5" type="tel" name="phone" placeholder="Телефон*" value="" required>
-      </div>
-      <div>
-        <input type="email" class="input-blc5" name="email" placeholder="Email" value="" required>
-      </div>
-      <div>
-        <textarea class="inputmessage-blc5" name= "message" placeholder="Ваш вопрос" value="" required></textarea>
-      </div>
-      <div>
-        <button class="button-blc5" type="submit" value="Отправить запрос" >Отправить запрос
-          <img src="/part5/arrow-circle-btn.svg" id="img-blc5">
-        </button>
-      </div>
-    </form>
-
-  </div>
+            <div class="form-blc5">
+              <p class="formtitle-blc5">Остались вопросы?</p>
+              <p class="formtext-blc5">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
+              <form action="#" method= "POST" id="formBlc5">
+                <div>
+                  <input class="input-blc5" type="text" placeholder="Имя*" name="nameUserBlc5" value="" required>
+                  <p class="block5_form_errormsg block5_form_errormsg_none" id="block5_form_errormsg"></p>
+                </div>
+                <div>
+                  <input class="input-blc5" type="tel" name="phoneUserBlc5" placeholder="Телефон*" value="" required>
+                  <p class="block5_form_errormsg block5_form_errormsg_none" id="block5_form_errormsg"></p>
+                </div>
+                <div>
+                  <input type="emailUserBlc5" class="input-blc5" name="emailUserBlc5" placeholder="Email" value="" required>
+                  <p class="block5_form_errormsg block5_form_errormsg_none" id="block5_form_errormsg"></p>
+                </div>
+                <div>
+                  <textarea class="inputmessage-blc5" name= "messageUserBlc5" placeholder="Ваш вопрос" value="" required></textarea>
+                  <p class="block5_form_errormsg block5_form_errormsg_none" id="block5_form_errormsg"></p>
+                </div>
+                <div>
+                  <button class="button-blc5" id="button-blc5" type="submit" value="Отправить запрос">Отправить запрос
+                    <img src="/part5/arrow-circle-btn.svg" id="img-blc5">
+                  </button>
+                </div>
+              </form>
+              <div id="block5_form_submitted" class="block5_form_submitted_none">
+                <img src="/part5/check-mark-blc5.svg" alt="checkmark" width="112" height="112">
+                <h2 class="block5_form_submitted_heading">Спасибо за заявку!</h2>
+                <p class="block5_form_submitted_par">Мы обязательно свяжемся с вами.</p>
+              </div>
+          </div>
           </div>
       </article>
       </section>
