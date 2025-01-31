@@ -4,7 +4,7 @@
 }
 
 $mainBackgrColor: #282b38;
-$lightColor: #767c9645;
+$lightColor: #363A4D;
 $buttonColor: #e58d35;
 $font: "Proxima Nova", serif;
 
@@ -438,12 +438,14 @@ body {
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
     select {
         padding: 10px;
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
   }
   .section2_close {
@@ -484,8 +486,8 @@ body {
             font-size: 0.6rem;
          }
         @media screen and (max-width: 375px) {
-            width: 40%;
-            max-width: 40%;
+            width: 60%;
+            max-width: 60%;
             font-size: 0.6rem;
          }
     }
@@ -505,8 +507,14 @@ body {
         width: 40%;
         max-width: 60%;
         min-height: 20px;
-        height: 20px;
+        height: 3rem;
         text-align: end;
+        font-family: $font;
+        @media screen and (max-width: 375px) {
+          width: 60%;
+          max-width: 60%;
+          font-size: 0.8rem;
+       }
     }
 }
 .section2_modal_calcVolume_item_errormsg {
@@ -542,7 +550,7 @@ body {
     //margin: 0 auto;
     min-width: 50%;
     max-width: 80%;
-    background-color: #767c9645;
+    background-color: $lightColor;
     border-radius: 20px;
     padding: 30px;
     font-family: $font;
@@ -562,6 +570,7 @@ body {
         max-width: 60%;
         border-radius: 10px;
         font-size: 0.8rem;
+        font-family: $font;
     }
     button {
         width: 60%;
@@ -609,7 +618,7 @@ body {
         align-self: flex-end;
         width: 50%;
         max-width: 80%;
-        min-height: 20px;
+        min-height: 3rem;
         text-align: end;
     }
 
