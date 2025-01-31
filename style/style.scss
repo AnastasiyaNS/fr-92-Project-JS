@@ -1139,6 +1139,48 @@ $width1440Bl5: 1140px;
 $width768Bl5: 668px;
 $width375Bl5: 335px;
 
+
+.block5_form_errormsg {
+  color: white;
+  font-family: "Open Sans", serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+block5_form_errormsg_none {
+  display: none !important;
+}
+
+.block5_form_submitted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", serif;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+      h2 {
+          width: 400px;
+          max-width: 100%;
+      }
+      p {
+          width: 400px;
+          max-width: 100%;
+      }
+  @media screen and (max-width: 375px) {
+      width: 100%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+}
+.block5_form_submitted_none {
+  display: none !important;
+}
+.block5_form_none {
+  display: none;
+}
+
+
 .block-5{
     width: $width1440Bl5;
     height: 668px;
