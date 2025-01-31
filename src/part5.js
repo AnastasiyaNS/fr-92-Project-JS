@@ -9,7 +9,6 @@ accordionContent.forEach((item, index) => {
         let answer = item.querySelector(".answer-bl5");
         if(item.classList.contains("open")){
             answer.style.height = `${answer.scrollHeight}px`; //scrollHeight property returns the height of an element including padding , but excluding borders, scrollbar or margin
-            
             item.querySelector("i").classList.replace("arrow-circle-closed", "arrow-circle-open");
         }else{
             answer.style.height = "0px";

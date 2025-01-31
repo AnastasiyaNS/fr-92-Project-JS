@@ -1147,7 +1147,7 @@ $width375Bl5: 335px;
 // Message Block5
 .block5_form_errormsg {
   color: white;
-  font-family: "Open Sans", serif;
+ font-size: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -1159,11 +1159,12 @@ $width375Bl5: 335px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Open Sans", serif;
+  align-items: center;
   color: white;
   padding: 30px;
   width: 100%;
   max-width: 100%;
+  text-align: center;
       h2 {
           width: 400px;
           max-width: 100%;
@@ -1279,7 +1280,7 @@ $width375Bl5: 335px;
     line-height: 144.5%;
     color: #282B38;
     background-color: #fff;
-    overflow: hidden; 
+    overflow:auto; 
     border-radius: 10px; 
     box-sizing: border-box;
 } 
@@ -1294,6 +1295,7 @@ $width375Bl5: 335px;
     border: 1px;
     border-radius: 20px;
     box-sizing: border-box;
+    
     }
     
 // Formtitle-blc5
