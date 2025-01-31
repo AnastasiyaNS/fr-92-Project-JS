@@ -1127,7 +1127,7 @@ background-color: rgba(54, 58, 77, 1);
 //*** section 5  адаптацию делаем сразу в своей секции
 
 // ПОСТОЯННЫЕ ВЕЛИЧИНЫ
-  // Параметры значков-бл5
+  // Images of Block5
 %imgParametrsbl5{
     width: 47px;
     height: 47px;
@@ -1139,14 +1139,14 @@ $width1440Bl5: 1140px;
 $width768Bl5: 668px;
 $width375Bl5: 335px;
 
-
+// Message Block5
 .block5_form_errormsg {
   color: white;
   font-family: "Open Sans", serif;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-block5_form_errormsg_none {
+.block5_form_errormsg_none {
   display: none !important;
 }
 
@@ -1184,12 +1184,13 @@ block5_form_errormsg_none {
 .block-5{
     width: $width1440Bl5;
     height: 668px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 128px;
+    margin: 0px 150px 128px 150px;
+    // margin-left: 150px;
+    // margin-right: 150px;
+    // margin-bottom: 128px;
     background-color: $mainBackgrColor;
 }
-// Значки стрелочек
+// Symbols arrow
 .arrow-circle-closed{
     content: url('/public/part5/arrow-circle-closed.svg');
 }
@@ -1200,7 +1201,7 @@ block5_form_errormsg_none {
     @extend %imgParametrsbl5;
 }
 
-// Заголовок-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+// Title-ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
 .title-blc5{
     display: flex;
     flex-direction: column;
@@ -1216,13 +1217,13 @@ block5_form_errormsg_none {
     color:#fff;
     
 }
-// Черта под заголовком
+// Line under Title of Blc5
 #line-blc5{
     width: 85px;
     height: 2px;
 }
 
-/* Обертка блок 5 (QA and Form) */
+/* WRAP of Block5(QA and Form) */
 .wrap-block5{
     display: flex;
     flex-direction: row;
