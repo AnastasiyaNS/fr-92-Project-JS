@@ -23,7 +23,7 @@ accordionContent.forEach((item, index) => {
         question.style.backgroundColor="white";
     }else{
         question.style.color="white"
-        question.style.backgroundColor="#3A444E";
+        question.style.backgroundColor="#363A4d";
     }
     })
 })
@@ -41,11 +41,9 @@ function removeOpen(index1){
 
 
 
-
-
 // Block5-Form
 const formBlcFive=document.getElementById('formBlc5');
-// console.log(formBlc5)
+
 // Валидация
 const nameUserBlc5=formBlcFive.elements.nameUserBlc5;
 function validateName(input){
@@ -118,8 +116,8 @@ function closeErrorMsg(input){
 }
 
 const sabMessage = document.getElementById("block5_form_submitted");
+
 function formSubmittedMsg(input){
-    
     sabMessage.classList.remove("block5_form_submitted_none");
     sabMessage.classList.add("block5_form_submitted");
     formBlcFive.classList.add("block5_form_none");
@@ -142,8 +140,6 @@ console.log(values)
 formBlcFive.reset();
 }
 
-// formBlcFive.addEventListener('submit', retrieveFormValue);
-
 const btnFormBlc5 = document.getElementById("button-blc5");
 btnFormBlc5.addEventListener('click', (input) => {
     formBlcFive.addEventListener("submit", (e) => {
@@ -159,3 +155,9 @@ btnFormBlc5.addEventListener('click', (input) => {
             }
         })
     })
+
+
+
+
+
+
