@@ -54,7 +54,7 @@ function validateName(input){
     if (correctValue === ''){
         showErrorMsg(input, 'Введите имя')
         return;
-     }
+    }
     if (regex.test(correctValue) === false) {
         showErrorMsg(input, "Имя должно состоять из букв и пробелов");
         return;
@@ -77,6 +77,31 @@ function validatePhone(input){
     closeErrorMsg(input);
     return true;
 }
+const emailUserBlc5=formBlcFive.elements.emailUserBlc5;
+function validateEmail(input){
+    const correctValue = input.value.trim();
+    const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (correctValue === '') {
+        showErrorMsg(input, "Введите электронную почту");
+        return;
+    }
+    if (regex.test(correctValue) === false) {
+        showErrorMsg(input, "Неверный формат электронной почты");
+        return;
+    }
+    closeErrorMsg(input);
+    return true;
+}
+const messageUserBlc5=formBlcFive.elements.messageUserBlc5;
+function validateMsg(input){
+    const correctValue = input.value.trim();
+    if (correctValue === ''){
+        showErrorMsg(input, "Введите сообщение")
+        return;
+    }
+    closeErrorMsg(input);
+    return true;
+}
 
 function showErrorMsg(input, message){
     const parentElement = input.parentElement;
@@ -84,7 +109,6 @@ function showErrorMsg(input, message){
     errorMsgPar.textContent = message;
     errorMsgPar.classList.remove("block5_form_errormsg_none");
 }
-
 function closeErrorMsg(input){
     const parentElement = input.parentElement;
     const errorMsgPar = parentElement.querySelector(".block5_form_errormsg");
@@ -93,48 +117,45 @@ function closeErrorMsg(input){
     return true;
 }
 
-const priceCalcConf = document.getElementById("section2_formcalc_submitted");
+const sabMessage = document.getElementById("block5_form_submitted");
 function formSubmittedMsg(input){
     
-    priceCalcConf.classList.remove("section2_formcalc_submitted_none");
-    priceCalcConf.classList.add("section2_formcalc_submitted");
-    formBlcFive.classList.add("part2_formcalc_none");
+    sabMessage.classList.remove("block5_form_submitted_none");
+    sabMessage.classList.add("block5_form_submitted");
+    formBlcFive.classList.add("block5_form_none");
 }
-
-
 
 nameUserBlc5.addEventListener('input', () => validateName(nameUserBlc5));
 phoneUserBlc5.addEventListener('input', () => validatePhone(phoneUserBlc5));
-
-
-
+emailUserBlc5.addEventListener('input', () => validateEmail(emailUserBlc5));
+messageUserBlc5.addEventListener('input', () => validateMsg(messageUserBlc5));
 
 function retrieveFormValue(event){
 event.preventDefault();
-
-const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
-const values={};
-
-fields.forEach(field => {
-    const {name, value}=field;
-    values[name]=value;
+    const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
+    const values={};
+    fields.forEach(field => {
+        const {name, value}=field;
+        values[name]=value;
 });
-
 console.log(values)
 formBlcFive.reset();
 }
 
 // formBlcFive.addEventListener('submit', retrieveFormValue);
 
-const btnCalcCargo = document.getElementById("button-blc5");
-btnCalcCargo.addEventListener('click', (input) => {
+const btnFormBlc5 = document.getElementById("button-blc5");
+btnFormBlc5.addEventListener('click', (input) => {
     formBlcFive.addEventListener("submit", (e) => {
-             e.preventDefault();
-             validateName(nameUserBlc5);
+            e.preventDefault();
+            validateName(nameUserBlc5);
                 validatePhone(phoneUserBlc5);
-               
-             if (validateName(nameUserBlc5) && validatePhone(phoneUserBlc5)) {
-                formSubmittedMsg(input)       
+                validateEmail(emailUserBlc5);
+                validateMsg(messageUserBlc5);
+            
+            if (validateName(nameUserBlc5) && validatePhone(phoneUserBlc5) && validateEmail(emailUserBlc5)&&validateMsg(messageUserBlc5)) {
+                formSubmittedMsg(input)
+                retrieveFormValue(input)       
             }
         })
     })

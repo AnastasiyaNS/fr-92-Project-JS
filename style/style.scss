@@ -65,7 +65,7 @@ block5_form_errormsg_none {
 }
 
 
-.section2_formcalc_submitted {
+.block5_form_submitted {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,10 +88,10 @@ block5_form_errormsg_none {
         margin-right: 5%;
     }
 }
-.section2_formcalc_submitted_none {
+.block5_form_submitted_none {
     display: none !important;
 }
-.part2_formcalc_none {
+.block5_form_none {
     display: none;
 }
 
