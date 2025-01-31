@@ -1,4 +1,4 @@
-// Block5
+// Block5-Accordion
 const accordionContent = document.querySelectorAll(".acc-bl5");
 
 accordionContent.forEach((item, index) => {
@@ -9,7 +9,6 @@ accordionContent.forEach((item, index) => {
         let answer = item.querySelector(".answer-bl5");
         if(item.classList.contains("open")){
             answer.style.height = `${answer.scrollHeight}px`; //scrollHeight property returns the height of an element including padding , but excluding borders, scrollbar or margin
-            
             item.querySelector("i").classList.replace("arrow-circle-closed", "arrow-circle-open");
         }else{
             answer.style.height = "0px";
@@ -39,51 +38,11 @@ function removeOpen(index1){
     })
 }
 
-// Forma
-// const formBlcFive=document.getElementById('formBlc5');
-// // console.log(formBlc5)
-
-// function retrieveFormValue(event){
-//   event.preventDefault();
-  
-// const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
-// const values={};
- 
-//   fields.forEach(field => {
-//     const {name, value}=field;
-//     values[name]=value;
-//   });
-  
-//   console.log(values)
-// formBlcFive.reset();
-//  }
-//  formBlcFive.addEventListener('submit', retrieveFormValue);
-
-
-// const formBlcFive=document.getElementById('formBlc5');
-// // console.log(formBlc5)
-
-// function retrieveFormValue(event){
-// event.preventDefault();
-
-// const fields=document.querySelectorAll('.input-blc5, .inputmessage-blc5');
-// const values={};
-
-// fields.forEach(field => {
-//     const {name, value}=field;
-//     values[name]=value;
-// });
-
-// console.log(values)
-// formBlcFive.reset();
-// }
-
-// formBlcFive.addEventListener('submit', retrieveFormValue);
 
 
 // Block5-Form
 const formBlcFive=document.getElementById('formBlc5');
-// console.log(formBlc5)
+
 // Валидация
 const nameUserBlc5=formBlcFive.elements.nameUserBlc5;
 function validateName(input){
@@ -156,8 +115,8 @@ function closeErrorMsg(input){
 }
 
 const sabMessage = document.getElementById("block5_form_submitted");
+
 function formSubmittedMsg(input){
-    
     sabMessage.classList.remove("block5_form_submitted_none");
     sabMessage.classList.add("block5_form_submitted");
     formBlcFive.classList.add("block5_form_none");
@@ -179,8 +138,6 @@ event.preventDefault();
 console.log(values)
 formBlcFive.reset();
 }
-
-// formBlcFive.addEventListener('submit', retrieveFormValue);
 
 const btnFormBlc5 = document.getElementById("button-blc5");
 btnFormBlc5.addEventListener('click', (input) => {
