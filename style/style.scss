@@ -632,7 +632,7 @@ body {
 
 //*** section 3  адаптацию делаем сразу в своей секции
 .h2-block3{
-  font-family: 'Figtree', serif;
+  font-family:$font;
   font-size: 36px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
@@ -747,6 +747,7 @@ color: rgba(255, 255, 255, 1);
 height: 482px;
 border-radius: 20px;
 opacity: 0px;
+margin-bottom: 30px;
 }
 
 .carousel-block3-text1{
