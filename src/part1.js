@@ -1,8 +1,8 @@
 export const burger = document.getElementById('burger');
-burger.addEventListener('click', function(){
+export function navbarClick(){
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');
-})
+}
 export let sliderBlock1 = document.querySelector('.slider_block1 .list');
 export let items = document.querySelectorAll('.slider_block1 .list .item');
 export let next = document.getElementById('next');
@@ -11,11 +11,11 @@ export let dots = document.querySelectorAll('.slider_block1 .dots li');
 export let lengthItems = items.length - 1;
 export let activeBlock1 = 0;
 
-function nextToggle(){
+export function nextToggle(){
     activeBlock1 = activeBlock1 + 1 <= lengthItems ? activeBlock1 + 1 : 0;
     reloadSlider();
 }
-function prevToggle(){
+export function prevToggle(){
     activeBlock1 = activeBlock1 - 1 >= 0 ? activeBlock1 - 1 : lengthItems;
     reloadSlider();
 }
