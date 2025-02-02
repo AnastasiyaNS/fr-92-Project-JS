@@ -911,7 +911,7 @@ body {
   justify-content: center;
   background: rgb(54, 58, 77);
   border-radius: 20px;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     width: 375px;
     height: 726px;
   }
@@ -933,7 +933,7 @@ body {
       background-color: rgb(229, 141, 53);
       margin: 8px auto 0;
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 376px) {
       font-size: 24px;
     }
   }
@@ -944,7 +944,7 @@ body {
   width: 1300px;
   margin: 0 auto;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     width: 375px;
   }
   .slider_arrow_block4 {
@@ -953,7 +953,7 @@ body {
     background: rgb(54, 58, 77);
     cursor: pointer;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 376px) {
       display: none;
     }
   }
@@ -965,7 +965,7 @@ body {
   justify-content: space-around;
   overflow: hidden;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     width: 300px;
     height: 523px;
     flex-direction: column;
@@ -980,7 +980,7 @@ body {
     margin: 10px;
     color: rgb(255, 255, 255);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 376px) {
       width: 335px;
       margin: 0 auto;
       // flex-direction: column;
@@ -989,6 +989,7 @@ body {
       width: 307px;
       height: 430px;
       margin: 0 auto;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -1031,7 +1032,7 @@ body {
     gap: 26px;
     margin-top: 33px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 376px) {
       display: flex;
     }
     .indicator_block4 {
@@ -1060,28 +1061,16 @@ body {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
     url("/images/block4/card2.png");
   @extend %card_backgr;
-
-  @media screen and (max-width: 375px) {
-    //display: none;
-  }
 }
 .card3_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
     url("/images/block4/card3.png");
   @extend %card_backgr;
-
-  @media screen and (max-width: 375px) {
-    //display: none;
-  }
 }
 .card4_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
     url("/images/block4/card4.png");
   @extend %card_backgr;
-
-  @media screen and (max-width: 375px) {
-    //display: none;
-  }
 }
 .about_container_block4 {
   width: 1440px;
@@ -1089,7 +1078,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     width: 375px;
   }
   .about_wrapper_block4 {
@@ -1098,7 +1087,7 @@ body {
     margin: 0 auto;
     display: flex;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 376px) {
       width: 335px;
       height: 726px;
       flex-direction: column;
@@ -1126,7 +1115,7 @@ body {
           background: rgb(137, 194, 73);
           margin: 8px auto 0;
         }
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 376px) {
           font-size: 24px;
           text-align: center;
           &::after {
@@ -1139,7 +1128,7 @@ body {
         font-size: 18px;
         font-weight: 400;
         line-height: 170%;
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 376px) {
           width: 335px;
           font-size: 16px;
           line-height: 149.5%;
@@ -1151,7 +1140,7 @@ body {
       width: 647px;
       height: 564px;
       transform: rotate(9.1deg);
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 376px) {
         width: 277px;
         height: 277px;
       }

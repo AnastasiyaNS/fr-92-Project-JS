@@ -17,24 +17,16 @@ import {
 import { nextToggle } from "./part1";
 import { prevToggle } from "./part1";
 import { reloadSlider } from "./part1";
-burger.addEventListener("click", function () {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("active");
-});
+import { navbarClick } from "./part1";
+burger.addEventListener("click", navbarClick);
 dots.forEach((li, key) => {
   li.addEventListener("click", () => {
     activeBlock1 = key;
     reloadSlider();
   });
 });
-function nextToggle() {
-  activeBlock1 = activeBlock1 + 1 <= lengthItems ? activeBlock1 + 1 : 0;
-  reloadSlider();
-}
-function prevToggle() {
-  activeBlock1 = activeBlock1 - 1 >= 0 ? activeBlock1 - 1 : lengthItems;
-  reloadSlider();
-}
+prev.addEventListener("click", prevToggle);
+next.addEventListener("click", nextToggle);
 
 //import from part2
 import { formPriceCalc } from "./part2";
