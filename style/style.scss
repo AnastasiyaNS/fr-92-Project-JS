@@ -39,6 +39,7 @@ body {
     align-items: center;
     @media (max-width: 768px) {
       display: none;
+      height: 300px;
       flex-direction: column;
       position: absolute;
       top: 100px;
@@ -67,7 +68,6 @@ body {
       }
       a {
         color: white;
-        text-decoration: none;
       }
     }
     .nav-links li:hover {
@@ -82,6 +82,9 @@ body {
       border-radius: 90px;
       height: 50px;
       width: 171px;
+      a {
+        color: #fff;
+      }
     }
     .nav_btn:hover {
       background-color: #d1761b;
@@ -107,27 +110,25 @@ body {
     }
   }
 }
-
+.container_block1 {
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1400px;
+  border-radius: 20px;
+}
 .slider_block1 {
   position: relative;
-  max-width: 100vw;
-  height: 700px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: 10px;
+  height: 800px;
   .list {
     position: absolute;
-    height: 800px;
-    left: 0;
-    top: 0;
     display: flex;
     transition: 1s;
+    height: 100%;
     .item {
       position: relative;
       img {
-        width: 1400px;
-        max-width: 100vw;
+        width: 100vw;
         height: 100%;
         object-fit: cover;
       }
@@ -166,6 +167,9 @@ body {
           cursor: pointer;
           @media (max-width: 375px) {
             width: 200px;
+          }
+          a{
+            color: #fff;
           }
         }
         button:hover {
