@@ -1297,9 +1297,10 @@ $width375Bl5: 335px;
   line-height: 144.5%;
   color: #282b38;
   background-color: #fff;
-  overflow: auto;
+  overflow:hidden;
   border-radius: 10px;
   box-sizing: border-box;
+  // position:static;
 }
 
 // Form-Blc5
@@ -1413,6 +1414,7 @@ $width375Bl5: 335px;
   .answer-bl5 {
     width: 600px;
     padding-left: 22px;
+    position:relative;
   }
   .formtitle-blc5,
   .formtext-blc5 {
