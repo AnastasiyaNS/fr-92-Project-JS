@@ -1170,8 +1170,7 @@ $width375Bl5: 335px;
 .block5_form_errormsg {
   color: white;
   font-size: 15px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0px 0px 0px 20px;
 }
 .block5_form_errormsg_none {
   display: none !important;
@@ -1210,7 +1209,7 @@ $width375Bl5: 335px;
 
 .block-5 {
   width: $width1440Bl5;
-  height: 668px;
+  min-height: 668px;
   margin: 0px 150px 128px 150px;
   // margin-left: 150px;
   // margin-right: 150px;
@@ -1257,12 +1256,12 @@ $width375Bl5: 335px;
   justify-content: space-between;
   gap: 34px;
   width: $width1440Bl5;
-  height: 553px;
+  min-height: 553px;
 }
 
 // Accordion Blc5
 .accordion {
-  height: 553px;
+  min-height: 553px;
 }
 
 // Question and Answer (blc5)
@@ -1310,7 +1309,7 @@ $width375Bl5: 335px;
 // Form-Blc5
 .form-blc5 {
   width: 390px;
-  height: 553px;
+  min-height: 553px;
   padding-top: 38px;
   padding-bottom: 38px;
   background-color: #363a4d;
@@ -1347,10 +1346,11 @@ $width375Bl5: 335px;
   width: 310px;
   margin-left: 40px;
   padding-left: 20px;
+  font-family: $font;
   font-size: 15px;
   font-weight: 400;
   line-height: 126%;
-  color: #cbcbcb;
+  color: #0c0c0c;
   background-color: #ffffff;
   border-radius: 10px;
   box-sizing: border-box;
@@ -1391,7 +1391,7 @@ $width375Bl5: 335px;
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .block-5 {
     width: $width768Bl5;
-    height: 1200px;
+    min-height: 1200px;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -1406,7 +1406,7 @@ $width375Bl5: 335px;
     align-items: center;
     gap: 28px;
     width: $width768Bl5;
-    height: 1100px;
+    min-height: 1100px;
   }
   .acc-bl5 {
     width: 600px;
@@ -1431,13 +1431,12 @@ $width375Bl5: 335px;
     width: 375px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 600px;
+    margin-bottom: 60px;
   }
   .title-blc5 {
     width: $width375Bl5;
     height: 85px;
     margin: 0px 20px 27px 20px;
-
     gap: 23px;
     font-size: 24px;
   }
@@ -1447,6 +1446,7 @@ $width375Bl5: 335px;
     margin-left: 20px;
     margin-right: 20px;
     width: $width375Bl5;
+    min-height: 1100px;
   }
   .acc-bl5 {
     width: $width375Bl5;
