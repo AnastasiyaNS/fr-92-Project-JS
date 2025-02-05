@@ -1388,7 +1388,8 @@ $width375Bl5: 335px;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+// @media screen and (max-width: 1024px) and (min-width: 768px) 
+@media screen and (max-width: 768px){
   .block-5 {
     width: $width768Bl5;
     min-height: 1200px;
@@ -1426,7 +1427,8 @@ $width375Bl5: 335px;
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 375px) {
+// @media screen and (max-width: 767px) and (min-width: 375px) 
+@media screen and (max-width: 375px){
   .block-5 {
     width: 375px;
     margin-left: 0px;
