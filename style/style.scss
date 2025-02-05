@@ -1,3 +1,5 @@
+@use "../assets/scss/fonts";
+@use "../assets/scss/footer";
 @font-face {
   font-family: "Proxima Nova";
   src: url("/assets/fonts/proximanova_regular.ttf");
@@ -1506,5 +1508,3 @@ $width375Bl5: 335px;
 }
 
 //*** section 6  адаптацию делаем сразу в своей секции
-@import "../assets/scss/fonts";
-@import "../assets/scss/footer";
