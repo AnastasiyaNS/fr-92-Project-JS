@@ -2,6 +2,7 @@ import { initSlider } from "./part4";
 initSlider();
 import "./part3";
 import "./part5";
+import "./part6";
 
 import {
   burger,
