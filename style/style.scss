@@ -244,8 +244,9 @@ body {
   width: 600px;
   height: 900px;
   @media screen and (max-width: 768px) {
-    width: 400px;
-    max-width: 600px;
+    // width: 400px;
+    // max-width: 600px;
+    display: none;
   }
   @media screen and (max-width: 375px) {
     display: none;
@@ -402,10 +403,12 @@ body {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   @media screen and (max-width: 768px) {
     width: 100%;
+    max-width: 80%;
     left: 0;
   }
   @media screen and (max-width: 375px) {
     width: 100%;
+    max-width: 80%;
     left: 0;
   }
 }
@@ -422,11 +425,15 @@ body {
   font-size: 0.8rem;
   @media screen and (max-width: 768px) {
     width: 50%;
+    max-width: 80%;
     left: 0;
+    margin: 0;
   }
   @media screen and (max-width: 375px) {
     width: 50%;
+    max-width: 80%;
     left: 0;
+    margin: 0;
   }
   label {
     padding: 5px;
