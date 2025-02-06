@@ -1449,9 +1449,9 @@ $width375Bl5: 335px;
     text-align: center;
   }
 }
-
-// @media screen and (max-width: 767px) and (min-width: 375px) 
-@media screen and (max-width: 375px){
+// @media screen and (max-width: 375px)
+@media screen and (max-width: 767px) and (min-width: 375px) 
+{
   .block-5 {
     width: 375px;
     margin-left: 0px;
