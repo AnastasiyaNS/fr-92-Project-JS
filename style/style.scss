@@ -1,3 +1,5 @@
+@use "../assets/scss/fonts";
+@use "../assets/scss/footer";
 @font-face {
   font-family: "Proxima Nova";
   src: url("/assets/fonts/proximanova_regular.ttf");
@@ -168,7 +170,7 @@ body {
           @media (max-width: 375px) {
             width: 200px;
           }
-          a{
+          a {
             color: #fff;
           }
         }
@@ -244,8 +246,9 @@ body {
   width: 600px;
   height: 900px;
   @media screen and (max-width: 768px) {
-    width: 400px;
-    max-width: 600px;
+    // width: 400px;
+    // max-width: 600px;
+    display: none;
   }
   @media screen and (max-width: 375px) {
     display: none;
@@ -402,10 +405,12 @@ body {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   @media screen and (max-width: 768px) {
     width: 100%;
+    max-width: 80%;
     left: 0;
   }
   @media screen and (max-width: 375px) {
     width: 100%;
+    max-width: 80%;
     left: 0;
   }
 }
@@ -422,11 +427,15 @@ body {
   font-size: 0.8rem;
   @media screen and (max-width: 768px) {
     width: 50%;
+    max-width: 80%;
     left: 0;
+    margin: 0;
   }
   @media screen and (max-width: 375px) {
     width: 50%;
+    max-width: 80%;
     left: 0;
+    margin: 0;
   }
   label {
     padding: 5px;
@@ -682,8 +691,10 @@ body {
 }
 
 .conteiner-block3-one {
+  margin: 0 auto;
+  border-radius: 20px;
   background-color: rgb(54, 58, 77);
-  width: 100%;
+  width: 96vw;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -808,6 +819,12 @@ body {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  a {
+    color: #fff;
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 .carousel-block3-button-detail {
   width: 153px;
@@ -826,6 +843,12 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   background-color: rgba(54, 58, 77, 1);
+  a {
+    color: #fff;
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 .slider-container {
@@ -907,7 +930,7 @@ body {
   height: 100%;
 }
 .services_container_block4 {
-  width: 1440px;
+  width: 96vw;
   height: 794px;
   margin: 0 auto;
   display: flex;
@@ -1210,7 +1233,7 @@ $width375Bl5: 335px;
 .block-5 {
   width: $width1440Bl5;
   min-height: 668px;
-  margin: 0px 150px 128px 150px;
+  margin: 0 auto 80px;
   // margin-left: 150px;
   // margin-right: 150px;
   // margin-bottom: 128px;
@@ -1300,7 +1323,7 @@ $width375Bl5: 335px;
   line-height: 144.5%;
   color: #282b38;
   background-color: #fff;
-  overflow:hidden;
+  overflow: hidden;
   border-radius: 10px;
   box-sizing: border-box;
   // position:static;
@@ -1419,7 +1442,7 @@ $width375Bl5: 335px;
   .answer-bl5 {
     width: 600px;
     padding-left: 22px;
-    position:relative;
+    position: relative;
   }
   .formtitle-blc5,
   .formtext-blc5 {
@@ -1487,5 +1510,3 @@ $width375Bl5: 335px;
 }
 
 //*** section 6  адаптацию делаем сразу в своей секции
-@import "../assets/scss/fonts";
-@import "../assets/scss/footer";
