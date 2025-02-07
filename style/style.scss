@@ -889,13 +889,13 @@ body {
   font-size: 24px;
   color: white;
   cursor: pointer;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
 
 .prev-button {
-  left: -70px;
+  left: -50px;
 }
 
 .next-button {
