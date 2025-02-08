@@ -178,7 +178,7 @@ a {
 }
 @media (max-width: 800px) {
   .cooperation {
-    width: 100%;
+    width: 100vw;
     border-radius: 0%;
   }
   .cooperation__info {
@@ -195,11 +195,16 @@ a {
   .row2 {
     grid-area: row2;
   }
+  .cooperation__info__list {
+    padding: 0;
+  }
   .cooperation__info-btn {
     padding-left: 50px;
     padding-right: 50px;
     width: 80%;
     justify-content: space-between;
+    max-width: 335px;
+    margin: 30px auto 30px;
   }
   .footer-information {
     display: none;
@@ -224,5 +229,10 @@ a {
   }
   .footer-contact-address {
     align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cooperation__info__list {
+    padding: 30px;
   }
 }
