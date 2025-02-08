@@ -164,6 +164,9 @@ a {
     margin-right: 10px;
   }
 }
+.social-icons-link:hover {
+  transform: scale(1.2);
+}
 .footer-contact-address {
   display: flex;
   flex-direction: column;
