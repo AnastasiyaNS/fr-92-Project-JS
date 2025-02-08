@@ -942,12 +942,13 @@ body {
     width: 375px;
     height: 726px;
   }
-  @media screen and (max-width: 768px) {
-    width: 768px;
+  @media screen and (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
+    max-width: 760px;
     height: 726px;
+    overflow: hidden;
   }
   .sectionTitle_block4 {
-    margin-top: 97px;
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 36px;
@@ -970,27 +971,31 @@ body {
   }
 }
 .slider_block4 {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
   display: flex;
   align-items: center;
-  width: 1300px;
+  justify-content: center;
   margin: 0 auto;
 
   @media screen and (max-width: 376px) {
     width: 375px;
   }
-  @media screen and (max-width: 768px) {
-    width: 760px;
+  @media screen and (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
   }
   .slider_arrow_block4 {
     all: unset;
     height: 45px;
+    margin: 15px;
     background: rgb(54, 58, 77);
     cursor: pointer;
 
     @media screen and (max-width: 376px) {
       display: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) and (min-width: 376px) {
       display: none;
     }
   }
@@ -998,43 +1003,44 @@ body {
 .slider_wrapper_block4 {
   width: 1140px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
   overflow: hidden;
-
   @media screen and (max-width: 376px) {
-    width: 300px;
+    width: 100%;
     height: 523px;
     flex-direction: column;
   }
-  @media screen and (max-width: 768px) {
-    width: 768px;
+  @media screen and (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
+    max-width: 760px;
     height: 523px;
     flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
   }
   .cards-container_block4 {
+    width: 1140px;
     display: flex;
+    gap: 20px;
     transition: transform 0.5s ease;
+    @media screen and (max-width: 376px) {
+      gap: 0px;
+    }
   }
   .card_block4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
     width: 360px;
     height: 482px;
-    margin: 10px;
+    border-radius: 20px;
+    opacity: 0px;
+    margin-bottom: 30px;
     color: rgb(255, 255, 255);
-
-    @media screen and (max-width: 376px) {
-      width: 335px;
-      margin: 0 auto;
-    }
-    // @media screen and (max-width: 768px) {
-    //   width: 360px;
-    //   margin: 0 auto;
-    // }
     .text_wrapper_block4 {
-      width: 307px;
+      width: 320px;
       height: 430px;
       margin: 0 auto;
-      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -1080,7 +1086,7 @@ body {
     @media screen and (max-width: 376px) {
       display: flex;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) and (min-width: 376px) {
       display: flex;
     }
     .indicator_block4 {
@@ -1121,42 +1127,39 @@ body {
   @extend %card_backgr;
 }
 .about_container_block4 {
-  width: 1440px;
+  width: 100%;
   height: 725px;
   margin: 0 auto;
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 376px) {
-    width: 375px;
-  }
-  @media screen and (max-width: 768px) {
-    width: 768px;
+  @media screen and (max-width: 768px) and (min-width: 376px) {
+    margin-bottom: 180px;
   }
   .about_wrapper_block4 {
-    width: 1140px;
+    width: 90vw;
     height: 633px;
     margin: 0 auto;
     display: flex;
 
     @media screen and (max-width: 376px) {
-      width: 335px;
+      width: 90%;
       height: 726px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    @media screen and (max-width: 768px) {
-      width: 760px;
+    @media screen and (max-width: 768px) and (min-width: 376px) {
+      width: 95%;
       height: 633px;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
     .aboutDesc_wrapper_block4 {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      margin: 0 auto;
       color: rgb(255, 255, 255);
       .aboutTitle_block4 {
         font-size: 36px;
@@ -1181,7 +1184,7 @@ body {
             left: 40%;
           }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 376px) {
           text-align: center;
           &::after {
             left: 45%;
@@ -1194,12 +1197,12 @@ body {
         font-weight: 400;
         line-height: 170%;
         @media screen and (max-width: 376px) {
-          width: 335px;
+          width: 350px;
           font-size: 16px;
           line-height: 149.5%;
           text-align: justify;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 376px) {
           width: 70vw;
           text-align: justify;
         }
@@ -1213,7 +1216,7 @@ body {
         width: 277px;
         height: 277px;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) and (min-width: 376px) {
         width: 468px;
         height: 468px;
       }
