@@ -35,3 +35,9 @@ dots.forEach((li, key) => {
     reloadSlider();
     })
 })
+
+export const buttonSlider = document.querySelector('.button_slider');
+export const formSection = document.getElementById('form-section2');
+export function buttonsSlider() {
+    formSection.scrollIntoView({ behavior: 'smooth' });
+};

@@ -4,6 +4,7 @@ import "./part3";
 import "./part5";
 import "./part6";
 
+//import from part1
 import {
   burger,
   sliderBlock1,
@@ -14,7 +15,11 @@ import {
   lengthItems,
   activeBlock1,
   refreshInterval,
+  buttonSlider,
+  formSection
 } from "./part1";
+
+import { buttonsSlider } from "./part1";
 import { nextToggle } from "./part1";
 import { prevToggle } from "./part1";
 import { reloadSlider } from "./part1";
@@ -28,6 +33,7 @@ dots.forEach((li, key) => {
 });
 prev.addEventListener("click", prevToggle);
 next.addEventListener("click", nextToggle);
+buttonSlider.addEventListener('click', buttonsSlider);
 
 //import from part2
 import { formPriceCalc } from "./part2";
