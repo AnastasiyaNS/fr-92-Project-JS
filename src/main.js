@@ -16,10 +16,9 @@ import {
   activeBlock1,
   refreshInterval,
   buttonSlider,
-  formSection
+  formSection,
+  navBtn,
 } from "./part1";
-
-import { buttonsSlider } from "./part1";
 import { nextToggle } from "./part1";
 import { prevToggle } from "./part1";
 import { reloadSlider } from "./part1";
@@ -33,7 +32,14 @@ dots.forEach((li, key) => {
 });
 prev.addEventListener("click", prevToggle);
 next.addEventListener("click", nextToggle);
-buttonSlider.addEventListener('click', buttonsSlider);
+navBtn.addEventListener('click', () => {
+  formSection.scrollIntoView({ behavior: 'smooth'});
+});
+buttonSlider.forEach(button => {
+  button.addEventListener('click', () => {
+      formSection.scrollIntoView({ behavior: 'smooth'});
+  });
+});
 
 //import from part2
 import { formPriceCalc } from "./part2";

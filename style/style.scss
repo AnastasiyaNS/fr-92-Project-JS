@@ -117,6 +117,7 @@ body {
   height: 100vh;
   overflow: hidden;
   max-width: 1400px;
+  max-height: min-content;
   border-radius: 20px;
 }
 .slider_block1 {
@@ -139,7 +140,7 @@ body {
         bottom: 300px;
         left: 200px;
         color: white;
-        @media (max-width: 375px) {
+        @media (max-width: 600px) {
           left: 50px;
           bottom: 350px;
         }

@@ -36,8 +36,7 @@ dots.forEach((li, key) => {
     })
 })
 
-export const buttonSlider = document.querySelector('.button_slider');
+export const buttonSlider = document.querySelectorAll('.button_slider');
 export const formSection = document.getElementById('form-section2');
-export function buttonsSlider() {
-    formSection.scrollIntoView({ behavior: 'smooth' });
-};
+export const navBtn = document.querySelector('.nav_btn');
+
