@@ -1,8 +1,8 @@
-@use "../assets/scss/fonts";
-@use "../assets/scss/footer";
+@use "../public/part6/assets/scss/fonts";
+@use "../public/part6/assets/scss/footer";
 @font-face {
   font-family: "Proxima Nova";
-  src: url("/assets/fonts/proximanova_regular.ttf");
+  src: url("/part6/assets/fonts/proximanova_regular.ttf");
 }
 
 $mainBackgrColor: #282b38;
@@ -13,15 +13,11 @@ $font: "Proxima Nova", serif;
 body {
   font-family: $font;
   background-color: $mainBackgrColor;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  // align-content: center;
 }
 //*** section 1  адаптацию делаем сразу в своей секции
 
@@ -247,8 +243,6 @@ body {
   width: 600px;
   height: 900px;
   @media screen and (max-width: 768px) {
-    // width: 400px;
-    // max-width: 600px;
     display: none;
   }
   @media screen and (max-width: 375px) {
@@ -269,7 +263,6 @@ body {
 .part2_formcalc {
   display: flex;
   flex-direction: column;
-  //padding: 20px;
 }
 .part2_formcalc_none {
   display: none;
@@ -310,7 +303,6 @@ body {
 }
 .part2_calc_input {
   font-family: $font;
-  //color: #CBCBCB;
   color: black;
   padding: 10px;
   border-radius: 10px;
@@ -326,10 +318,7 @@ body {
   border-radius: 10px;
   text-align: center;
 }
-// #part2_inputfile {
-//     //display: none;
 
-// }
 .part2_calc_errormsg {
   color: red;
   font-family: $font;
@@ -553,8 +542,6 @@ body {
 .currency_exch_calc {
   display: flex;
   flex-direction: column;
-  //justify-content: center;
-  //margin: 0 auto;
   min-width: 50%;
   max-width: 80%;
   background-color: $lightColor;
@@ -597,7 +584,6 @@ body {
 .currency_exch_calc_item {
   display: flex;
   flex-direction: column;
-  //justify-content: center;
   font-family: $font;
   font-size: 0.8rem;
   color: white;
@@ -1109,22 +1095,22 @@ body {
 }
 .card1_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
-    url("/images/block4/card1.png");
+    url("/part4/block4/card1.png");
   @extend %card_backgr;
 }
 .card2_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
-    url("/images/block4/card2.png");
+    url("/part4/block4/card2.png");
   @extend %card_backgr;
 }
 .card3_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
-    url("/images/block4/card3.png");
+    url("/part4/block4/card3.png");
   @extend %card_backgr;
 }
 .card4_block4 {
   background-image: linear-gradient(rgba(88, 88, 88, 0), rgba(4, 5, 17, 0.91)),
-    url("/images/block4/card4.png");
+    url("/part4/block4/card4.png");
   @extend %card_backgr;
 }
 .about_container_block4 {
