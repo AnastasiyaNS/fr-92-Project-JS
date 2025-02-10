@@ -1133,9 +1133,6 @@ body {
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) and (min-width: 376px) {
-    margin-bottom: 180px;
-  }
   .about_wrapper_block4 {
     width: 90vw;
     height: 633px;
@@ -1186,6 +1183,7 @@ body {
         }
         @media screen and (max-width: 768px) and (min-width: 376px) {
           text-align: center;
+          font-size: 30px;
           &::after {
             left: 45%;
           }
@@ -1204,6 +1202,7 @@ body {
         }
         @media screen and (max-width: 768px) and (min-width: 376px) {
           width: 70vw;
+          font-size: 16px;
           text-align: justify;
         }
       }
@@ -1217,8 +1216,8 @@ body {
         height: 277px;
       }
       @media screen and (max-width: 768px) and (min-width: 376px) {
-        width: 468px;
-        height: 468px;
+        width: 368px;
+        height: 368px;
       }
     }
   }
