@@ -4,6 +4,7 @@ import "./part3";
 import "./part5";
 import "./part6";
 
+//import from part1
 import {
   burger,
   sliderBlock1,
@@ -14,6 +15,9 @@ import {
   lengthItems,
   activeBlock1,
   refreshInterval,
+  buttonSlider,
+  formSection,
+  navBtn,
 } from "./part1";
 import { nextToggle } from "./part1";
 import { prevToggle } from "./part1";
@@ -28,6 +32,14 @@ dots.forEach((li, key) => {
 });
 prev.addEventListener("click", prevToggle);
 next.addEventListener("click", nextToggle);
+navBtn.addEventListener('click', () => {
+  formSection.scrollIntoView({ behavior: 'smooth'});
+});
+buttonSlider.forEach(button => {
+  button.addEventListener('click', () => {
+      formSection.scrollIntoView({ behavior: 'smooth'});
+  });
+});
 
 //import from part2
 import { formPriceCalc } from "./part2";
@@ -65,7 +77,6 @@ import { formVol } from "./part2";
 import { calcVolume } from "./part2";
 import { buttonVol } from "./part2";
 
-// formVol.addEventListener('submit', calcVolume);
 buttonVol.addEventListener("click", calcVolume);
 // import for currency exch cacl
 import { buttonCurrencyCalc } from "./part2";

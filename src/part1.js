@@ -35,3 +35,8 @@ dots.forEach((li, key) => {
     reloadSlider();
     })
 })
+
+export const buttonSlider = document.querySelectorAll('.button_slider');
+export const formSection = document.getElementById('form-section2');
+export const navBtn = document.querySelector('.nav_btn');
+

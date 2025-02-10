@@ -1,4 +1,3 @@
-// Переход на форму при нажатии кнопки в последней секции
 document
   .getElementById("cooperationBtn")
   .addEventListener("click", function () {

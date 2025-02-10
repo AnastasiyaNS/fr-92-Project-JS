@@ -25,7 +25,7 @@ nextButton.addEventListener("click", () => {
 const slide = () => {
   const slideOffset = -slideIndex * 380;
   slider.style.transform = `translateX(${slideOffset}px)`;
-  firstPointers[prevSlideIndex].classList.remove("active");
+  firstPointers[prevSlideIndex]?.classList?.remove("active");
   firstPointers[slideIndex].classList.add("active");
 };
 

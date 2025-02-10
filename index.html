@@ -17,7 +17,7 @@
       <section id="section1">
         <header class="header">
           <div class="logo">
-              <img src="./public/part1/logo.png" alt="logo">
+              <img src="/part1/logo.png" alt="logo">
           </div>
           <nav class="navbar">
               <ul class="nav-links">
@@ -27,7 +27,7 @@
                   <li><a href="#section_contacts">Контакты</a></li>
                   <li><a href="#form-section2">Оформить груз</a></li>
               </ul>
-              <button class="nav_btn"><a href="#form-section2">Оставить заявку </a></button>
+              <button class="nav_btn">Оставить заявку</button>
           </nav>
           <div class="burger-menu" id="burger">
               <div class="line"></div>
@@ -39,35 +39,35 @@
         <div class="slider_block1">
             <div class="list">
                 <div class="item">
-                    <img src="./public/part1/slider1.jpeg">
+                    <img src="/part1/slider1.jpeg">
                     <div class="content">
                         <h1 class="title_part1">ПРЯМОЕ КАРГО ИЗ КИТАЯ</h1>
                         <p class="paragraph_part1">Доставляем любые грузы из Китая по честной цене</p>
-                        <button><a href="#form-section2">Рассчитать стоимость</a></button>
+                        <button class="button_slider">Рассчитать стоимость</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="./public/part1/slider2.jpeg">
+                    <img src="/part1/slider2.jpeg">
                     <div class="content">
                         <h1 class="title_part1">ВЫКУП ТОВАРА С ТАОБАО, 1688</h1>
                         <p class="paragraph_part1">Выкуп и доставка товаров с китайских торговых площадок</p>
-                        <button><a href="#form-section2">Рассчитать стоимость</a></button>
+                        <button class="button_slider">Рассчитать стоимость</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="./public/part1/slider3.jpeg">
+                    <img src="/part1/slider3.jpeg">
                     <div class="content">
                         <h1 class="title_part1">ЭКСПРЕСС АВТО ДОСТАВКА</h1>
                         <p class="paragraph_part1">Доставка автотранспортом из Китая в Россию от 15 дней, от $0,5/кг</p>
-                        <button><a href="#form-section2">Рассчитать стоимость</a></button>
+                        <button class="button_slider">Рассчитать стоимость</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="./public/part1/slider4.jpeg">
+                    <img src="/part1/slider4.jpeg">
                     <div class="content">
                         <h1 class="title_part1">ГАРАНТИРУЕМ СРОКИ</h1>
                         <p class="paragraph_part1">Если мы не уложимся в обозначенные сроки, доставка груза со скидкой до 90%</p>
-                        <button><a href="#form-section2">Рассчитать стоимость</a></button>
+                        <button class="button_slider">Рассчитать стоимость</button>
                     </div>
                 </div>
             </div>
@@ -84,6 +84,7 @@
         </div>
       </div>
       </section>
+      
       <section id="section2">
         <div class="section2_calc_part">
           <form id="form-section2" class="part2_formcalc" name="priceCalc">
@@ -134,7 +135,7 @@
                 
                 <div class="part2_form_item">
                   <label for="part2_customerFile" class="part2_inputlabel">Загрузите фото товара</label>
-                  <input id="part2_inputfile" class="part2_calc_input" type="file" itemid="part2_customerFile" name="customerFile" placeholder="Загрузить фото товара">
+                  <input class="part2_calc_input" type="file" id="part2_customerFile" name="customerFile" placeholder="Загрузить фото товара">
                 </div>
             </div>
             <button id="part2_calc_button" class="part2_calc_button" type="submit" disabled>
@@ -150,8 +151,6 @@
           </div>
           <img id="manHelmet" src="/part2/medium-shot-man-holding-clipboard_1-removebg 1.svg" alt="man holding clipboard" width="100">
         </div>
-
-
 
           <!-- The Modal -->
           <div id="section2_myModal" class="section2_modal">
@@ -192,7 +191,6 @@
 
         <div class="section2_curr_exch">
           <form class="currency_exch_calc" name="currency_exch_calc">
-
             <div class="currency_exch_calc_item">
                 <label for="currency_input_amount">Введите сумму в формате XXX.XX</label>
                 <input name="currency_input_amount" id="currency_input_amount" type="text" placeholder="XXX.XX">
@@ -212,13 +210,10 @@
                 <button id="currency_exch_calc_calc">Рассчитать</button>
                 <p id="currency_exch_calc_final_sum"></p>
             </div>
-    
           </form>
         </div>
-        
       </section>
 
-        
         <section id="section3">
         <div class="conteiner-block3-one">
           <div class="title-block3">
@@ -231,7 +226,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid1.png"
+                    src="/part3/assets/image_block3_grid1.png"
                     alt="image1"
                   />
                 </div>
@@ -243,7 +238,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid2_check.png"
+                    src="/part3/assets/image_block3_grid2_check.png"
                     alt="image2"
                   />
                 </div>
@@ -255,7 +250,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid3_loupa.png"
+                    src="/part3/assets/image_block3_grid3_loupa.png"
                     alt="image3"
                   />
                 </div>
@@ -267,7 +262,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid4_trak.png"
+                    src="/part3/assets/image_block3_grid4_trak.png"
                     alt="image4"
                   />
                 </div>
@@ -279,7 +274,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid5_message.png"
+                    src="/part3/assets/image_block3_grid5_message.png"
                     alt="image5"
                   />
                 </div>
@@ -291,7 +286,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid6_like .png"
+                    src="/part3/assets/image_block3_grid6_like .png"
                     alt="image6"
                   />
                 </div>
@@ -303,7 +298,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid7_card.png"
+                    src="/part3/assets/image_block3_grid7_card.png"
                     alt="image7"
                   />
                 </div>
@@ -315,7 +310,7 @@
                 <div class="circle-block3-green">
                   <img
                     class="images-block3-one"
-                    src="public/assets/image_block3_grid8_stak.png"
+                    src="/part3/assets/image_block3_grid8_stak.png"
                     alt="image8"
                   />
                 </div>
@@ -338,8 +333,6 @@
           </div>
         </div>
 
-       
-
         <div id="section_price" class="conteiner-block3-two">
           <div class="title-block3">
             <h2 class="h2-block3">Варианты доставки грузов из Китая</h2>
@@ -352,20 +345,20 @@
                   <div class="carousel-card-block3">
                     <img
                       class="carousel-block3-images"
-                      src="public/assets/image_block3_carusel1.png"
+                      src="/part3/assets/image_block3_carusel1.png"
                       alt="carousel-image1-car"
                     />
                     <p class="carousel-block3-text1">Авто - обычная</p>
                     <div class="carousel-card-section">
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_box.png"
+                        src="/part3/assets/image_block3_carusel_box.png"
                         alt="carousel-calendar"
                       />
                       <p class="carousel-block3-text2">9-15 дней</p>
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_calendar.png"
+                        src="/part3/assets/image_block3_carusel_calendar.png"
                         alt="carousel-box"
                       />
                       <p class="carousel-block3-text2">от 5 кг</p>
@@ -386,22 +379,21 @@
                   <div class="carousel-card-block3">
                     <img
                       class="carousel-block3-images"
-                      src="public/assets/image_block3_carusel2.png"
+                      src="/part3/assets/image_block3_carusel2.png"
                       alt="carousel-image1-car"
                     />
                     <p class="carousel-block3-text1">Авто - ускоренная</p>
                     <div class="carousel-card-section">
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_calendar.png"
+                        src="/part3/assets/image_block3_carusel_calendar.png"
                         alt="carousel-calendar"
                       />
                       <p class="carousel-block3-text2">9-15 дней</p>
 
-
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_box.png"
+                        src="/part3/assets/image_block3_carusel_box.png"
                         alt="carousel-box"
                       />
                       <p class="carousel-block3-text2">от 5 кг</p>
@@ -422,21 +414,21 @@
                   <div class="carousel-card-block3">
                     <img
                       class="carousel-block3-images"
-                      src="public/assets/image_block3_carusel3.png"
+                      src="/part3/assets/image_block3_carusel3.png"
                       alt="carousel-image1-car"
                     />
                     <p class="carousel-block3-text1">Авиа</p>
                     <div class="carousel-card-section">
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_calendar.png"
+                        src="/part3/assets/image_block3_carusel_calendar.png"
                         alt="carousel-calendar"
                       />
                       <p class="carousel-block3-text2">9-15 дней</p>
 
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_box.png"
+                        src="/part3/assets/image_block3_carusel_box.png"
                         alt="carousel-box"
                       />
                       <p class="carousel-block3-text2">от 5 кг</p>
@@ -457,20 +449,20 @@
                   <div class="carousel-card-block3">
                     <img
                       class="carousel-block3-images"
-                      src="public/assets/image_block3_carusel4.png"
+                      src="/part3/assets/image_block3_carusel4.png"
                       alt="carousel-image1-car"
                     />
                     <p class="carousel-block3-text1">Ж/д</p>
                     <div class="carousel-card-section">
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_calendar.png"
+                        src="/part3/assets/image_block3_carusel_calendar.png"
                         alt="carousel-calendar"
                       />
                       <p class="carousel-block3-text2">9-15 дней</p>
- <img
+                      <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_box.png"
+                        src="/part3/assets/image_block3_carusel_box.png"
                         alt="carousel-box"
                       />
                       <p class="carousel-block3-text2">от 5 кг</p>
@@ -491,21 +483,21 @@
                   <div class="carousel-card-block3">
                     <img
                       class="carousel-block3-images"
-                      src="public/assets/image_block3_carusel5.png"
+                      src="/part3/assets/image_block3_carusel5.png"
                       alt="carousel-image1-car"
                     />
                     <p class="carousel-block3-text1">Море</p>
                     <div class="carousel-card-section">
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_calendar.png"
+                        src="/part3/assets/image_block3_carusel_calendar.png"
                         alt="carousel-calendar"
                       />
                       <p class="carousel-block3-text2">9-15 дней</p>
 
                       <img
                         class="carousel-block3-ikon"
-                        src="public/assets/image_block3_carusel_box.png"
+                        src="/part3/assets/image_block3_carusel_box.png"
                         alt="carousel-box"
                       />
                       <p class="carousel-block3-text2">от 5 кг</p>
@@ -548,15 +540,14 @@
           <div class="pointer"></div>
           <div class="pointer"></div>
         </div>
-      </section>
-               
+      </section>               
       
       <section id="section4">
         <section class="services_container_block4">
           <h2 class="sectionTitle_block4">Услуги</h2>
           <section class="slider_block4">
             <button class="slider_arrow_block4 prev">
-              <img src="./images/block4/arrow_previous.svg" alt="Назад" />
+              <img src="/part4/block4/arrow_previous.svg" alt="Назад" />
             </button>
             <section class="slider_wrapper_block4">
               <div class="cards-container_block4">
@@ -617,7 +608,7 @@
               </div>
             </section>
             <button class="slider_arrow_block4 next">
-              <img src="./images/block4/arrow_next.svg" alt="Вперед" />
+              <img src="/part4/block4/arrow_next.svg" alt="Вперед" />
             </button>
           </section>
         </section>
@@ -639,7 +630,7 @@
             </div>
             <img
               class="aboutImg_block4"
-              src="./images/block4/about.png"
+              src="/part4/block4/about.png"
               alt="О компании"
             />
           </article>
@@ -764,14 +755,14 @@
             </ul>
             <img
               class="cooperation__info-img row2"
-              src="../assets/images/section6 box.png"
+              src="../part6/assets/images/section6 box.png"
               alt="cargo box"
             />
           </div>
           <div class="cooperation__info">
             <img
               class="cooperation__info-img"
-              src="../assets/images/section6 truck.png"
+              src="../part6/assets/images/section6 truck.png"
               alt="truck"
             />
             <div class="cooperation__info-second">
@@ -793,7 +784,7 @@
                 Оформить груз </a>
                 <img
                   class="cooperation__info-img"
-                  src="./assets/icons/arrow.png"
+                  src="./part6/assets/icons/arrow.png"
                   alt="arrow"
                   style="width: 27px; height: 27px"
                 />
@@ -807,7 +798,7 @@
               <li>
                 <img
                   class="footer-logo"
-                  src="./assets/icons/logo.png"
+                  src="./part6/assets/icons/logo.png"
                   alt="company logo"
                 />
               </li>
@@ -824,24 +815,24 @@
               <li>
                 <div id="section_contacts" class="social-icons">
                   <a href="https://instagram.com" target="_blank"
-                    ><img src="./assets/icons/instagram.png" alt="instagram logo"
+                    ><img class="social-icons-link" src="./part6/assets/icons/instagram.png" alt="instagram logo"
                   /></a>
                   <a href="https://vk.com" target="_blank"
-                    ><img src="./assets/icons/vk.png" alt="vk logo"
+                    ><img class="social-icons-link" src="./part6/assets/icons/vk.png" alt="vk logo"
                   /></a>
                   <a href="https://telegram.com" target="_blank"
-                    ><img src="./assets/icons/telegram-logo.png" alt="telegram logo"
+                    ><img class="social-icons-link" src="./part6/assets/icons/telegram-logo.png" alt="telegram logo"
                   /></a>
                 </div>
               </li>
             </ul>
             <ul class="footer-list">
               <h4>Грузоперевозки</h4>
-              <li><a href="#">Цены и сроки</a></li>
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Оформить груз</a></li>
+              <li><a href="#section_price">Цены и сроки</a></li>
+              <li><a href="#section4">Услуги</a></li>
+              <li><a href="#section_company">О компании</a></li>
+              <li><a href="#section_contacts">Контакты</a></li>
+              <li><a href="#form-section2">Оформить груз</a></li>
             </ul>
             <ul class="footer-list footer-service">
               <h4>Услуги</h4>
