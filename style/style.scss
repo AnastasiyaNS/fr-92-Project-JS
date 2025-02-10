@@ -1134,7 +1134,7 @@ body {
   align-items: center;
 
   @media screen and (max-width: 768px) and (min-width: 376px) {
-    margin-bottom: 180px;
+    //margin-bottom: 180px;
   }
   .about_wrapper_block4 {
     width: 90vw;
@@ -1162,7 +1162,7 @@ body {
       margin: 0 auto;
       color: rgb(255, 255, 255);
       .aboutTitle_block4 {
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 700;
         line-height: 124.5%;
         text-transform: uppercase;
@@ -1193,7 +1193,7 @@ body {
       }
       .aboutDesc_block4 {
         width: 555px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 170%;
         @media screen and (max-width: 376px) {
@@ -1217,8 +1217,8 @@ body {
         height: 277px;
       }
       @media screen and (max-width: 768px) and (min-width: 376px) {
-        width: 468px;
-        height: 468px;
+        width: 368px;
+        height: 368px;
       }
     }
   }
