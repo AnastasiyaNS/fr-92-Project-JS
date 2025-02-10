@@ -10,6 +10,9 @@ $background-color_3: #e58d35;
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
 ul {
   list-style: none;
 }
@@ -101,6 +104,9 @@ a {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+.cooperation__info-second {
+  margin-right: 10px;
 }
 .footer-block {
   margin-top: 60px;
